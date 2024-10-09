@@ -97,3 +97,5 @@ No matter which solution you choose, for you as a retail partner they are **FREE
 **Cons**
 - Needs most dev ressources
 
+Expeerly strongly recommends using Mux in either version as go-to-embed solution, offering the best user and conversion pushing experience.
+
