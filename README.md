@@ -64,8 +64,10 @@ As of now all our retail partners get a spreadsheet where on each line the relev
 See an example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
 ## 5. Choosing the Right Embedding Solution
-**No matter which solution you choose, for you as a retail partner they are FREE OF CHARGE!**
-### Youtube
+### 5.1 Embedding solutions are free ofcharge 
+No matter which solution you choose, for you as a retail partner they are **FREE OF CHARGE!**
+
+### 5.2 Youtube
 **Pros**
 - Easy integration with a known technology
 - Best for maximizing reach with public videos
@@ -74,7 +76,7 @@ See an example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuO
 - It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop to Youtube
 
 
-### Mux Streaming Links
+### 5.3 Mux Streaming Links
 **Pros**
 - Easy integration with a simple streaming link
 - Suited for high scalability with robust analytics and adaptive streaming
@@ -83,7 +85,7 @@ See an example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuO
 - Only native native video controls
 
 
-### Mux Embed SDK
+### 5.4 Mux Embed SDK
 **Pros**
 - Customizable experience
 - Suited for high scalability with robust analytics and adaptive streaming
