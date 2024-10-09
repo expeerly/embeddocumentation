@@ -19,4 +19,10 @@ Galaxus shows the expeerly in their image carousel, check this [link to the Phil
 
 Brack shows the expeerly in their image carousel, check this [link to the Philips Avent Kit ](https://www.brack.ch/philips-avent-baby-pflegeset-petrol-1614829)
 
+## 3. Embedding with Mux
+### 3.1 Embedding with Mux Streaming Links
+Mux Stream provides scalable video hosting, ideal for large volumes. You can use either the .mp4 format for static video playback or the .m3u8 format for adaptive streaming.
+For on-demand playback: `https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84/high.mp4`
+For adaptive streaming (ideal for varying bandwidths): `https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8`
+
 
