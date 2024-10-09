@@ -61,7 +61,7 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
 ## 4. Matching Video Links with Products in your Catalogue
-As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links.
+As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to 100 videos a month.
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
