@@ -14,4 +14,8 @@ To embed a YouTube video, use the iframe code. This is ideal for public videos i
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
 ```
+### 2.2 Embed examples
+Galaxus shows the expeerly in their image carousel, check this [link to the Philips Avent Kit](https://www.galaxus.ch/fr/s10/product/philips-avent-kit-de-soins-pour-bebe-soin-corporel-bebe-36358432?ip=8720689021937)
+Brack shows the expeerly in their image carousel, check this [link to the Philips Avent Kit ](https://www.brack.ch/philips-avent-baby-pflegeset-petrol-1614829)
+
 
