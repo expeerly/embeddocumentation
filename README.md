@@ -77,7 +77,7 @@ No matter which solution you choose, for you as a retail partner they are **FREE
 - Best for maximizing reach with public videos
   
 **Cons**
-- It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop to Youtube
+- It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop or marketplace to Youtube
 
 
 ### 5.3 Mux Streaming Links
