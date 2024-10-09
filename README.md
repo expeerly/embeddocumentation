@@ -6,7 +6,7 @@ Expeerly offers 2 Video Embedding Solutions via [Youtube](https://www.youtube.co
 
 ## 2. Embedding with Youtube
 ### 2.1 Embedding a YouTube Video
-To embed a YouTube video, use the iframe code. This is ideal for public videos intended for widespread sharing.
+To embed a YouTube video, use the iframe code.
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nqG3JCNkb0I?si=bikBYWxuWUS6SWCu" 
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
