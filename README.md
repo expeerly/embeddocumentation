@@ -1,5 +1,5 @@
 # Embedding Expeerly Videos on Online Shops or Marketplaces: Developer Guide
-This guide provides an overview of how to embed Expeerly videos into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process.
+This guide provides an overview of how to embed expeerly videos into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. Embedding via any of the solutions is free of charge for you as retail partner. Expeerly guarantees uptime and worldwide coverage via Youtube or Mux. As Youtube is well know, there are no more infos on uptime provided. For Mux terms, see here and [here](https://status.mux.com/).
 
 ## 1. Options: Youtube or Mux
 Expeerly offers 2 Video Embedding Solutions via [Youtube](https://www.youtube.com/) Embed Links or via [Mux](https://www.mux.com/).
@@ -42,7 +42,7 @@ Here is an example of a mux mp4 streaming link added to a website. It can be any
 Check our expeerly [corporate page](https://www.get.expeerly.com/) and scroll down to the Dyson customer quote. On this webflow we just add a play back [link](https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84/high.mp4) as above.
 
 #### M3U8
-For more freedom over video controls you can use the HLS (m3u8) URL in a player of your choice. See the documents [here](https://docs.mux.com/guides/play-your-videos#3-use-the-hls-url-in-a-player).
+For more freedom over video controls you can use the HLS (m3u8) URL in a player of your choice. See the documentation [here](https://docs.mux.com/guides/play-your-videos#3-use-the-hls-url-in-a-player).
 
 
 ### 3.3 Embedding with Mux Developer SDK
