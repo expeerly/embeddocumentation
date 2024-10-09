@@ -87,13 +87,13 @@ No matter which solution you choose, for you as a retail partner they are **FREE
 **Cons**
 - Only native video controls
 
-### 5.4 Mux MP4 Streaming Links
+### 5.4 Mux M3U8 Streaming Links
 **Pros**
 - Customizable experience
 - Suited for high scalability with robust analytics and adaptive streaming
   
 **Cons**
-- Needs to have player established
+- Needs to have player established or potentially dev ressources
 
 ### 5.5 Mux Embed SDK
 **Pros**
