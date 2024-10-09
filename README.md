@@ -36,7 +36,7 @@ https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8
 ```
 
 ### 3.2 Embed example
-Here is an example of a mux streaming link added to a website. It can be any website as all browser are able to read mp4 or m3u8 formats and will trigger the native video controls.
+Here is an example of a mux streaming link added to a website. It can be any website as all browsers are able to read mp4 or m3u8 formats and will trigger the native video controls.
 
 Check our expeerly [corporate page](https://www.get.expeerly.com/) and scroll down to the Dyson customer quote. On this webflow we just add a play back [link](https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84/high.mp4) as above.
 
