@@ -52,7 +52,7 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 ## 4. Matching Video Links with Product Catalogue
 As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. As our existing partners choose to embed with Youtube, it’s only Youtube links, but Mux links and Streaming IDs would be shown for your integration.
 
-See an example here.
+See an example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
 ## 5. Choosing the Right Embedding Solution
 **No matter which solution you choose, for you as a retail partner they are FREE OF CHARGE!**
