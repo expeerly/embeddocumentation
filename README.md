@@ -35,7 +35,7 @@ For adaptive streaming (ideal for varying bandwidths):
 https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8
 ```
 
-### 3.2 Embed example
+### 3.2 Embed examples
 #### MP4
 Here is an example of a mux mp4 streaming link added to a website. It can be any website as all browsers are able to read mp4 formats and will trigger the native video controls.
 
