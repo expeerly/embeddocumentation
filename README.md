@@ -66,7 +66,7 @@ As of now all our retail partners get a spreadsheet where on each line the relev
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
-### 4.2 Retail partner portail (pending)
+### 4.2 Retail partner portal (pending)
 We have a retail partner portal in the pipeline that will allow you to login to our [platform](https://app.expeerly.com) and see all the available videos there. 
 
 ### 4.3 Public API (upon request)
