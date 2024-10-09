@@ -19,6 +19,8 @@ Galaxus shows the expeerly in their image carousel, check this [link to the Phil
 
 Brack shows the expeerly in their image carousel, check this [link to the Philips Avent Kit ](https://www.brack.ch/philips-avent-baby-pflegeset-petrol-1614829)
 
+But ultimately you're free to add the above embed code on any part of our online shop or marketplace. We recommend the carousel or product description just next to images for best conversion impact.
+
 ## 3. Embedding with Mux
 ### 3.1 Embedding with Mux Streaming Links
 Mux Stream provides scalable video hosting, ideal for large volumes. You can use either the .mp4 format for static video playback or the .m3u8 format for adaptive streaming.
@@ -48,6 +50,8 @@ https://www.expeerly.com/de/video-reviews/elektronik-gadgets/trisa/raclette-tisc
 ```
 
 As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-videos#showing-subtitles-by-default) and separate [audio track](https://docs.mux.com/guides/player-core-functionality#multi-track-audio-selector) in 4 languages are available and can be triggered.
+
+We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
 ## 4. Matching Video Links with Product Catalogue
 As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. As our existing partners choose to embed with Youtube, it’s only Youtube links, but Mux links and Streaming IDs would be shown for your integration.
