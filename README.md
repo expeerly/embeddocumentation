@@ -79,17 +79,23 @@ No matter which solution you choose, for you as a retail partner they are **FREE
 **Cons**
 - It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop or marketplace to Youtube
 
-
-### 5.3 Mux Streaming Links
+### 5.3 Mux MP4 Streaming Links
 **Pros**
 - Easy integration with a simple streaming link
 - Suited for high scalability with robust analytics and adaptive streaming
   
 **Cons**
-- Only native native video controls
+- Only native video controls
 
+### 5.4 Mux MP4 Streaming Links
+**Pros**
+- Customizable experience
+- Suited for high scalability with robust analytics and adaptive streaming
+  
+**Cons**
+- Needs to have player established
 
-### 5.4 Mux Embed SDK
+### 5.5 Mux Embed SDK
 **Pros**
 - Customizable experience
 - Suited for high scalability with robust analytics and adaptive streaming
