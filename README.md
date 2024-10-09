@@ -59,9 +59,11 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
 ## 4. Matching Video Links with Product Catalogue
-As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. As our existing partners choose to embed with Youtube, it’s only Youtube links, but Mux links and Streaming IDs would be shown for your integration.
+As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. We have a retail partner portal in the pipeline that will allow you to login to our [platform](https://app.expeerly.com) and see all the available videos there.
 
 See an example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
+
+We don't offer an API at this stage, but if you're interested in using an API, please get in touch with us on [product@expeerly.com](mailto:product@expeerly.com).
 
 ## 5. Choosing the Right Embedding Solution
 ### 5.1 Embedding solutions are free ofcharge 
