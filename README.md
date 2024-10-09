@@ -41,11 +41,28 @@ Check our expeerly [corporate page](https://www.get.expeerly.com/) and scroll do
 ### 3.3 Embedding with Mux Developer SDK
 For a more customizable experience, use the Mux Developer SDK and add to your online shop or marketplace. You can find the documentation [here](https://docs.mux.com/guides/mux-player-web).
 
-#### 3.4 Embed example
+### 3.4 Embed example
 Here is an example link for the Trisa Raclette Tischgrill video and how we integrate the Mux Web Player on our own expeerly.com video player page.
 ```
 https://www.expeerly.com/de/video-reviews/elektronik-gadgets/trisa/raclette-tischgrill-style-connect/100000469
 ```
+
+As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-videos#showing-subtitles-by-default) and separate [audio track](https://docs.mux.com/guides/player-core-functionality#multi-track-audio-selector) in 4 languages are available and can be triggered.
+
+## 4. Matching Video Links with Product Catalogue
+As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. As our existing partners choose to embed with Youtube, it’s only Youtube links, but Mux links and Streaming IDs would be shown for your integration.
+
+See an example here.
+
+## 5. Choosing the Right Embedding Solution
+**No matter which solution you choose, for you as a retail partner they are FREE OF CHARGE!**
+#### Youtube
+**Pros**
+- Easy integration with a known technology
+- Best for maximizing reach with public videos
+**Cons**
+- It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop to Youtube
+
 
 
 
