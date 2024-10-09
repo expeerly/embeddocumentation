@@ -72,6 +72,9 @@ We have a retail partner portal in the pipeline that will allow you to login to 
 ### 4.3 Public API (upon request)
 We don't offer a public API at this stage, but if you're interested in using the API, please get in touch with us on [product@expeerly.com](mailto:product@expeerly.com).
 
+### 4.4 Formats
+Expeerly videos are usually in the 9:16 vertical format on mux and 16:9 horizontal embed format on Youtube (but the content remains 9:16 in most cases).
+
 ## 5. Choosing the Right Embedding Solution
 ### 5.1 Always free of charge
 No matter which solution you choose, for you as a retail partner they are **FREE OF CHARGE!**
