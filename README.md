@@ -68,7 +68,7 @@ See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBH
 We have a retail partner portal in the pipeline that will allow you to login to our [platform](https://app.expeerly.com) and see all the available videos there. We don't offer an API at this stage, but if you're interested in using an API, please get in touch with us on [product@expeerly.com](mailto:product@expeerly.com).
 
 ## 5. Choosing the Right Embedding Solution
-### 5.1 Embedding solutions are free ofcharge 
+### 5.1 Always free of charge
 No matter which solution you choose, for you as a retail partner they are **FREE OF CHARGE!**
 
 ### 5.2 Youtube
