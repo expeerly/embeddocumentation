@@ -1,5 +1,5 @@
 # Embedding Expeerly Videos on Online Shops or Marketplaces: Developer Guide
-This guide provides an overview of how to embed expeerly videos into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. Embedding via any of the solutions is free of charge for you as retail partner.
+This guide provides an overview of how to embed [expeerly videos](https://expeerly.com) into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. Embedding via any of the solutions is free of charge for you as retail partner.
 
 Version 1.0, 09 October 2024
 
