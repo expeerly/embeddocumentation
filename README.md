@@ -56,7 +56,7 @@ Here is an example link for the Trisa Raclette Tischgrill video and how we integ
 https://www.expeerly.com/de/video-reviews/elektronik-gadgets/trisa/raclette-tischgrill-style-connect/100000469
 ```
 
-As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-videos#showing-subtitles-by-default) and separate [audio track](https://docs.mux.com/guides/player-core-functionality#multi-track-audio-selector) in 4 languages are available and can be triggered.
+As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-videos#showing-subtitles-by-default) and separate [audio tracks](https://docs.mux.com/guides/player-core-functionality#multi-track-audio-selector) in 4 languages are available and can be triggered. The 4 languages are English, German, French and Italian on which all our videos have subtitles provided by default. AI dubbed Audio tracks are not yet available on existing videos, but we're planning to add them in early 2025.
 
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
