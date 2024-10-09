@@ -16,7 +16,7 @@ To embed a YouTube video, use the iframe code.
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
 ```
-### 2.2 Embed examples
+### 2.2 Embed examples Youtube
 Galaxus shows the expeerly video in their image carousel, check this [link to the Philips Avent Kit](https://www.galaxus.ch/fr/s10/product/philips-avent-kit-de-soins-pour-bebe-soin-corporel-bebe-36358432?ip=8720689021937)
 
 Brack shows the expeerly video in their image carousel, check this [link to the Philips Avent Kit ](https://www.brack.ch/philips-avent-baby-pflegeset-petrol-1614829)
@@ -37,7 +37,7 @@ For adaptive streaming (ideal for varying bandwidths):
 https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8
 ```
 
-### 3.2 Embed examples
+### 3.2 Embed examples Mux Streaming Links
 #### MP4
 Here is an example of a mux mp4 streaming link added to a website. It can be any website as all browsers are able to read mp4 formats and will trigger the native video controls.
 
@@ -50,7 +50,7 @@ For more freedom over video controls you can use the HLS (m3u8) URL in a player 
 ### 3.3 Embedding with Mux Developer SDK
 For a more customizable experience, use the Mux Developer SDK and add to your online shop or marketplace. You can find the documentation [here](https://docs.mux.com/guides/mux-player-web).
 
-### 3.4 Embed example
+### 3.4 Embed example Mux SDK
 Here is an example link for the Trisa Raclette Tischgrill video and how we integrate the Mux Web Player on our own expeerly.com video player page.
 ```
 https://www.expeerly.com/de/video-reviews/elektronik-gadgets/trisa/raclette-tischgrill-style-connect/100000469
@@ -60,7 +60,7 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
-## 4. Matching Video Links with Product Catalogue
+## 4. Matching Video Links with Products in your Catalogue
 As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links.
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
