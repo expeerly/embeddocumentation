@@ -1,5 +1,5 @@
 # Embedding Expeerly Videos on Online Shops or Marketplaces: Developer Guide
-This guide provides an overview of how to embed expeerly videos into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. Embedding via any of the solutions is free of charge for you as retail partner. Expeerly guarantees uptime and worldwide coverage via Youtube or Mux. As Youtube is well know, there are no more infos on uptime provided. For Mux terms, see here and [here](https://status.mux.com/).
+This guide provides an overview of how to embed expeerly videos into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. Embedding via any of the solutions is free of charge for you as retail partner.
 
 ## 1. Options: Youtube or Mux
 Expeerly offers 2 Video Embedding Solutions via [Youtube](https://www.youtube.com/) Embed Links or via [Mux](https://www.mux.com/).
