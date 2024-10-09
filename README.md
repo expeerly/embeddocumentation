@@ -95,7 +95,7 @@ No matter which solution you choose, for you as a retail partner they are **FREE
 - Suited for high scalability with robust analytics and adaptive streaming
   
 **Cons**
-- Needs most dev ressources
+- Needs more dev ressources
 
 Expeerly strongly recommends using Mux in either version as go-to-embed solution, offering the best user and conversion pushing experience.
 
