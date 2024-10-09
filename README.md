@@ -56,13 +56,29 @@ See an example here.
 
 ## 5. Choosing the Right Embedding Solution
 **No matter which solution you choose, for you as a retail partner they are FREE OF CHARGE!**
-#### Youtube
+### Youtube
 **Pros**
 - Easy integration with a known technology
 - Best for maximizing reach with public videos
+  
 **Cons**
 - It **NEGATIVELY** impacts your conversion rate as you channel traffic out of your online shop to Youtube
 
 
+### Mux Streaming Links
+**Pros**
+- Easy integration with a simple streaming link
+- Suited for high scalability with robust analytics and adaptive streaming
+  
+**Cons**
+- Only native native video controls
 
+
+### Mux Embed SDK
+**Pros**
+- Customizable experience
+- Suited for high scalability with robust analytics and adaptive streaming
+  
+**Cons**
+- Needs most dev ressources
 
