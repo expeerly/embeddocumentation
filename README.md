@@ -23,9 +23,15 @@ Brack shows the expeerly in their image carousel, check this [link to the Philip
 ### 3.1 Embedding with Mux Streaming Links
 Mux Stream provides scalable video hosting, ideal for large volumes. You can use either the .mp4 format for static video playback or the .m3u8 format for adaptive streaming.
 
-For on-demand playback: `https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84/high.mp4`
+For on-demand playback: 
+```
+https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84/high.mp4
+```
 
-For adaptive streaming (ideal for varying bandwidths): `https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8`
+For adaptive streaming (ideal for varying bandwidths):
+```
+https://stream.mux.com/q2EyUPCM0000k3QbfjLVTmEL5N6PDL701aovfWx7QByv84.m3u8
+```
 
 ### 3.2 Embed example
 Here is an example of a mux streaming link added to a website. It can be any website as all browser are able to read mp4 or m3u8 formats and will trigger the native video controls.
