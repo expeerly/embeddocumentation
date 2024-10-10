@@ -73,7 +73,7 @@ We have a retail partner portal in the pipeline that will allow you to login to 
 We don't offer a public API at this stage, but if you're interested in using the API, please get in touch with us on [product@expeerly.com](mailto:product@expeerly.com).
 
 ### 4.4 Formats
-Expeerly videos are usually in the 9:16 vertical format on mux and 16:9 horizontal embed format on Youtube (but the content remains 9:16 in most cases).
+Expeerly videos are usually in the 9:16 vertical format on mux and 16:9 horizontal embed format on Youtube (but the content remains 9:16 in most cases). The reason for the vertical format is that about 60-70% of all shopping traffic comes from mobile devices, depending on your individual case of course.
 
 ## 5. Choosing the Right Embedding Solution
 ### 5.1 Always free of charge
