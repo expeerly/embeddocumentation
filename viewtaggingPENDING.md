@@ -3,7 +3,7 @@ To effectively track and distinguish video views originating from different onli
 **1. Configure Custom Dimensions in Mux Data:**
 
 Mux Data allows you to define up to ten custom dimensions, depending on your plan, to capture metadata specific to your use case. For tracking the source of video views, you can set up a custom dimension named, for example, `shop_id`. 
-`https://docs.mux.com/guides/extend-data-with-custom-metadata`
+[See mux docs](https://docs.mux.com/guides/extend-data-with-custom-metadata)
 
 - **Access Custom Dimensions Settings:**
   - Log in to your Mux dashboard.
