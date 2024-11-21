@@ -147,7 +147,7 @@ const ExpeerlyEmbed = (() => {
     },
   };
 })();
-
+```
 
 ## Customization Options
 
@@ -172,4 +172,4 @@ Middleware returns standardized JSON:
   "reviewText": "Great product, highly recommended!",
   "gtin": "1234567890123"
 }
-
+```
