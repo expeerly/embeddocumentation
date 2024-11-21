@@ -78,7 +78,7 @@ Retailers embed the following script in their product pages:
 <script>
   (function (d, s, gtin, options) {
     const script = d.createElement("script");
-    script.src = "https://yourdomain.com/embed.js";
+    script.src = "https://expeerly.com/embed.js";
     script.onload = function () {
       ExpeerlyEmbed.init(gtin, options);
     };
@@ -99,7 +99,7 @@ The hosted script fetches metadata from the middleware and dynamically renders t
 ```javascript
 const ExpeerlyEmbed = (() => {
   async function fetchVideoData(gtin) {
-    const response = await fetch(`https://yourdomain.com/api/video-data?gtin=${gtin}`);
+    const response = await fetch(`https://expeerly.com/api/video-data?gtin=${gtin}`);
     if (!response.ok) throw new Error("Failed to fetch video data");
     return response.json();
   }
