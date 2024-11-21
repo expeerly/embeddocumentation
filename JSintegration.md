@@ -171,3 +171,38 @@ Middleware returns standardized JSON:
   "gtin": "1234567890123"
 }
 ```
+
+# View Tagging with Mux Data (Separate Option)
+
+## To track video views by shop using Mux Data:
+
+### Configuration in Mux Dashboard
+#### Enable Custom Dimensions:
+1. Go to **Settings > Custom Dimensions** in the Mux dashboard.
+2. Configure a dimension (e.g., `custom_1`) with a display name like **Shop ID**.
+
+---
+
+### Embedding Metadata in the Video Player
+
+#### Option 1: Using `<mux-video>` Element
+```html
+<mux-video
+  playback-id="Heq3vyLty8Q02H01kZ01ZvVcj7NMjLcBHi721V4bkZt75A"
+  env-key="YOUR_ENV_KEY"
+  metadata-custom-1="shop-id-001" <!-- Unique Shop Identifier -->
+  controls>
+</mux-video>
+```
+
+#### Option 2: Using JavaScript SDK
+```
+mux.monitor('#video-element', {
+  data: {
+    env_key: 'YOUR_ENV_KEY',
+    video_id: 'video-id-1234',
+    video_title: 'Product Demo',
+    custom_1: 'shop-id-001' // Unique Shop Identifier
+  }
+});
+```
