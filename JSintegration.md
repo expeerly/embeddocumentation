@@ -178,7 +178,7 @@ Middleware returns standardized JSON:
 
 ### Configuration in Mux Dashboard
 #### Enable Custom Dimensions:
-1. Go to **Settings > Custom Dimensions** in the Mux dashboard.
+1. Go to **Settings > Custom Dimensions** in the Mux dashboard. [See mux docs](https://docs.mux.com/guides/extend-data-with-custom-metadata)
 2. Configure a dimension (e.g., `custom_1`) with a display name like **Shop ID**.
 
 ---
