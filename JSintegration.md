@@ -91,3 +91,85 @@ Retailers embed the following script in their product pages:
 <div id="expeerly-video-container"></div>
 ```
 
+## Hosted Embed Script (embed.js)
+
+The hosted script fetches metadata from the middleware and dynamically renders the video player and reviewer details.
+
+### Script Example
+```javascript
+const ExpeerlyEmbed = (() => {
+  async function fetchVideoData(gtin) {
+    const response = await fetch(`https://yourdomain.com/api/video-data?gtin=${gtin}`);
+    if (!response.ok) throw new Error("Failed to fetch video data");
+    return response.json();
+  }
+
+  function renderStars(rating) {
+    const fullStar = "⭐";
+    const emptyStar = "☆";
+    return fullStar.repeat(Math.floor(rating)) + emptyStar.repeat(5 - Math.floor(rating));
+  }
+
+  function renderContent(data, options) {
+    const container = document.getElementById(options.containerId || "expeerly-video-container");
+    if (!container) throw new Error("Container not found");
+
+    container.innerHTML = `
+      <div style="max-width: 640px; margin: 20px auto; font-family: Arial, sans-serif; text-align: left;">
+        <mux-player
+          playback-id="${data.playbackId}"
+          metadata-video-title="${data.videoTitle}"
+          style="width: 100%; border-radius: 8px;"
+          accent-color="${options.accentColor || "#ea580c"}">
+        </mux-player>
+        <div style="margin-top: 10px; display: flex; align-items: center;">
+          <img src="https://via.placeholder.com/50" alt="${data.reviewerName}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
+          <div>
+            <p><strong>${data.reviewerName}</strong> from ${data.location}</p>
+            <p style="color: gold;">${renderStars(data.rating)} (${data.rating} / 5)</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+          <img src="https://example.com/expeerly-logo.png" alt="Expeerly Logo" style="width: 100px;">
+        </div>
+      </div>
+    `;
+  }
+
+  return {
+    async init(gtin, options = {}) {
+      try {
+        const data = await fetchVideoData(gtin);
+        renderContent(data, options);
+      } catch (error) {
+        console.error("Expeerly Embed Error:", error);
+      }
+    },
+  };
+})();
+
+
+## Customization Options
+
+Retailers can customize the embed by passing options:
+
+- **accentColor**: Adjust the Mux Player theme color.
+- **containerId**: Specify the container where the content is rendered.
+
+---
+
+### API Response Example
+
+Middleware returns standardized JSON:
+
+```json
+{
+  "playbackId": "EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs",
+  "videoTitle": "Expeerly Review for Product XYZ",
+  "reviewerName": "John",
+  "location": "Zurich, Switzerland",
+  "rating": 4.5,
+  "reviewText": "Great product, highly recommended!",
+  "gtin": "1234567890123"
+}
+
