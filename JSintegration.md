@@ -91,7 +91,7 @@ Retailers embed the following script in their product pages:
 <div id="expeerly-video-container"></div>
 ```
 
-## Hosted Embed Script (embed.js)
+### Hosted Embed Script (embed.js)
 
 The hosted script fetches metadata from the middleware and dynamically renders the video player and reviewer details.
 
@@ -149,14 +149,12 @@ const ExpeerlyEmbed = (() => {
 })();
 ```
 
-## Customization Options
+### Customization Options
 
 Retailers can customize the embed by passing options:
 
 - **accentColor**: Adjust the Mux Player theme color.
 - **containerId**: Specify the container where the content is rendered.
-
----
 
 ### API Response Example
 
