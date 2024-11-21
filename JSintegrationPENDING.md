@@ -130,7 +130,7 @@ const ExpeerlyEmbed = (() => {
           </div>
         </div>
         <div style="text-align: center; margin-top: 10px;">
-          <img src="https://example.com/expeerly-logo.dvg" alt="Expeerly Logo" style="width: 100px;">
+          <img src="https://example.com/expeerly-logo.svg" alt="Expeerly Logo" style="width: 100px;">
         </div>
       </div>
     `;
