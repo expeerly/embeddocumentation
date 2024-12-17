@@ -1,4 +1,4 @@
-# Middleware-based Expeerly Video Review Integration - DRAFT
+# Middleware-based Expeerly Video Review Integration
 
 This solution outlines a middleware-based architecture for embedding Expeerly video reviews into retailer websites. It leverages GTIN/EAN codes for matching product metadata, ensuring secure and standardized data delivery via a hosted middleware service.
 
