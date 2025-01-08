@@ -39,7 +39,7 @@ import MuxPlayer from '@mux/mux-player-react';
 function VideoPlayer() {
   return (
     <MuxPlayer
-      playbackId="FROM EXPEERLY"
+      playbackId="FROM_EXPEERLY"
       ...
       }}
     />
@@ -60,7 +60,7 @@ import mux from '@mux/videojs-mux';
 
 const player = videojs('video-element-id');
 player.src({
-  src: 'https://stream.mux.com/FROMEXPEERLY.m3u8',
+  src: 'https://stream.mux.com/FROM_EXPEERLY.m3u8',
   type: 'application/x-mpegURL',
 });
 
