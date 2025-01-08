@@ -6,10 +6,55 @@ This guide explains how to integrate Expeerly video reviews into your product pa
 
 ### Step 1: Install Mux Player
 
+#### Option 1: Using the Mux Player Web Component
 Add the Mux Player SDK to your website's `<head>` section. This is required to play the video reviews:
-
 ```html
 <script src="https://unpkg.com/@mux/mux-player"></script>
+```
+#### Option 2: Integrating with React Applications
+Installation via npm:
+`npm install @mux/mux-player-react`
+and add to your product pages:
+```
+import React from 'react';
+import MuxPlayer from '@mux/mux-player-react';
+
+function VideoPlayer() {
+  return (
+    <MuxPlayer
+      playbackId="your_playback_id"
+      metadata={{
+        video_id: 'video-id-123456',
+        video_title: 'Sample Video',
+        viewer_user_id: 'user-id-67890',
+      }}
+    />
+  );
+}
+
+export default VideoPlayer;
+```
+#### Option 3: Utilizing Mux with Video.js
+Installation via npm:
+`npm install video.js @mux/videojs-mux`
+and add to your product pages:
+```
+import videojs from 'video.js';
+import mux from '@mux/videojs-mux';
+
+const player = videojs('video-element-id');
+player.src({
+  src: 'https://stream.mux.com/your_playback_id.m3u8',
+  type: 'application/x-mpegURL',
+});
+
+mux(player, {
+  data: {
+    env_key: 'your_environment_key',
+    video_title: 'Sample Video',
+    viewer_user_id: 'user-id-67890',
+  },
+});
 ```
 
 ### Step 2: Get Your Integration Script
