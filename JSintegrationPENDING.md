@@ -67,7 +67,7 @@ Available data attributes:
 - `data-language`: Set the interface language
 
 ## What the embed.js does
-
+```
 (function() {
   // Configuration 
   const BUBBLE_API = 'https://appname.bubbleapps.io/api/1.1/obj/videos';
@@ -282,4 +282,4 @@ Available data attributes:
     init();
   }
 })();
-
+```
