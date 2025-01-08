@@ -39,11 +39,8 @@ import MuxPlayer from '@mux/mux-player-react';
 function VideoPlayer() {
   return (
     <MuxPlayer
-      playbackId="your_playback_id"
-      metadata={{
-        video_id: 'video-id-123456',
-        video_title: 'Sample Video',
-        viewer_user_id: 'user-id-67890',
+      playbackId="FROM EXPEERLY"
+      ...
       }}
     />
   );
@@ -63,15 +60,13 @@ import mux from '@mux/videojs-mux';
 
 const player = videojs('video-element-id');
 player.src({
-  src: 'https://stream.mux.com/your_playback_id.m3u8',
+  src: 'https://stream.mux.com/FROMEXPEERLY.m3u8',
   type: 'application/x-mpegURL',
 });
 
 mux(player, {
   data: {
-    env_key: 'your_environment_key',
-    video_title: 'Sample Video',
-    viewer_user_id: 'user-id-67890',
+  ...
   },
 });
 ```
@@ -107,7 +102,7 @@ To customize the appearance of the Expeerly integration, you can add optional da
 <script 
   src="https://expeerly.com/embed.js" 
   data-gtin="YOUR_PRODUCT_GTIN"
-  data-accent-color="#FF5733"
+  data-accent-color="#2C1277"
   data-language="en"
   data-display="both"
   async>
@@ -126,7 +121,7 @@ const expeerly = (function() {
   const BUBBLE_API = 'https://appname.bubbleapps.io/api/1.1/obj/videos';
   const DEFAULT_OPTIONS = {
     display: 'both',
-    accentColor: '#ea580c',
+    accentColor: '#2C1277',
     language: 'en'
   };
 
@@ -256,9 +251,8 @@ const expeerly = (function() {
       align-items: center;
       gap: 8px;
       padding: 8px 16px;
-      border: 1px solid #e5e7eb;
       border-radius: 8px;
-      background: white;
+      background: #2C1277;
       cursor: pointer;
       transition: all 0.2s;
     }
@@ -277,7 +271,7 @@ const expeerly = (function() {
     }
 
     .expeerly-review-item {
-      border: 1px solid #e5e7eb;
+      border: 1px solid #2C1277;
       border-radius: 12px;
       overflow: hidden;
     }
@@ -301,11 +295,11 @@ const expeerly = (function() {
     }
 
     .expeerly-rating {
-      color: #fbbf24;
+      color: #FFC122;
     }
 
     .expeerly-views {
-      color: #6b7280;
+      color: white;
       font-size: 14px;
     }
 
@@ -322,7 +316,7 @@ const expeerly = (function() {
     }
 
     .expeerly-info a {
-      color: #ea580c;
+      color: #2C1277;
       text-decoration: underline;
     }
   `;
