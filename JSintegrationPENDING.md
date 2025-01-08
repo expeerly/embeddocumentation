@@ -44,7 +44,6 @@ The integration automatically provides:
   - View counts
   - Expeerly branding
 - Above-fold summary button linking to review block
-- Built-in analytics tracking
 - Zero-impact when no videos are available
 
 ## Customization
