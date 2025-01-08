@@ -2,9 +2,24 @@
 
 This guide explains how to integrate Expeerly video reviews into your product pages. The integration enables both carousel-style video reviews and a detailed review block through a simple script integration.
 
+**PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
+
+## Features
+
+The integration automatically provides:
+- Video reviews in your product image carousel
+- Detailed review block including:
+  - Star ratings
+  - Reviewer names and profile pictures
+  - View counts
+  - Expeerly branding
+- Above-fold summary button linking to review block
+- Zero-impact when no videos are available
+
 ## Integration Steps
 
 ### Step 1: Install Mux Player
+You do not need to create a mux account to do this.
 
 #### Option 1: Using the Mux Player Web Component
 Add the Mux Player SDK to your website's `<head>` section. This is required to play the video reviews:
@@ -83,18 +98,6 @@ That's it! The Expeerly script will automatically:
 - Create a review block with detailed information
 - Add a summary button above the fold
 - Handle all analytics tracking
-
-## Features
-
-The integration automatically provides:
-- Video reviews in your product image carousel
-- Detailed review block including:
-  - Star ratings
-  - Reviewer names and profile pictures
-  - View counts
-  - Expeerly branding
-- Above-fold summary button linking to review block
-- Zero-impact when no videos are available
 
 ## Customization
 
