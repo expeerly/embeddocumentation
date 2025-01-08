@@ -1,208 +1,82 @@
-# Middleware-based Expeerly Video Review Integration
+# Expeerly Video Review Integration Guide
 
-This solution outlines a middleware-based architecture for embedding Expeerly video reviews into retailer websites. It leverages GTIN/EAN codes for matching product metadata, ensuring secure and standardized data delivery via a hosted middleware service.
+This guide explains how to integrate Expeerly video reviews into your product pages. The integration enables both carousel-style video reviews and a detailed review block through a simple script integration.
 
----
+## Integration Steps
 
-## Architecture Overview
+### Step 1: Install Mux Player
 
-### Components:
-1. **Bubble API**: Source of video metadata, ratings, and reviewer details.
-2. **Middleware Service**:
-   - Built with **Next.js**.
-   - Acts as an intermediary for secure and efficient communication.
-   - Matches GTIN/EAN codes to video metadata and returns structured data.
-3. **Retailer JavaScript Snippet**:
-   - Fetches data via the middleware API.
-   - Dynamically renders Mux Player, ratings, and reviewer details.
+Add the Mux Player SDK to your website's `<head>` section. This is required to play the video reviews:
 
-### Data Flow:
-1. Retailer script sends a request to the middleware with the GTIN/EAN code.
-2. Middleware queries the Bubble API for corresponding data.
-3. Middleware returns structured metadata to the script.
-4. Retailer script dynamically renders the content.
-
----
-
-## Middleware Implementation
-
-### Next.js API Route
-Middleware service handles GTIN/EAN lookup and returns transformed data.
-
-**`/pages/api/video-data.js`**
-```javascript
-import axios from "axios";
-
-export default async function handler(req, res) {
-  const { gtin } = req.query;
-
-  if (!gtin) {
-    return res.status(400).json({ error: "GTIN is required" });
-  }
-
-  try {
-    const bubbleResponse = await axios.get(
-      `https://appname.bubbleapps.io/api/1.1/obj/videos?constraints=[{"key":"gtin","constraint_type":"equals","value":"${gtin}"}]`,
-      {
-        headers: { Authorization: `Bearer YOUR_BUBBLE_API_KEY` },
-      }
-    );
-
-    const data = bubbleResponse.data?.results[0];
-    if (!data) {
-      return res.status(404).json({ error: "No video data found for GTIN" });
-    }
-
-    const transformedData = {
-      playbackId: data.playback_id,
-      videoTitle: data.video_title,
-      reviewerName: data.reviewer_name,
-      location: data.location,
-      rating: data.rating,
-      reviewText: data.review_text,
-      gtin: data.gtin,
-    };
-
-    res.status(200).json(transformedData);
-  } catch (error) {
-    console.error("Middleware error:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-}
-```
-## Retailer JavaScript Snippet
-Retailers embed the following script in their product pages:
-
-### Snippet Example
 ```html
+<script src="https://unpkg.com/@mux/mux-player"></script>
+```
+
+### Step 2: Get Your Integration Script
+
+Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.
+
+### Step 3: Add the Script to Your Product Pages
+
+Add your unique integration script to your product page template just before the closing `</body>` tag:
+
+```html
+<!-- This is an example. Get your actual script from the Expeerly dashboard -->
 <script>
-  (function (d, s, gtin, options) {
-    const script = d.createElement("script");
-    script.src = "https://expeerly.com/embed.js";
-    script.onload = function () {
-      ExpeerlyEmbed.init(gtin, options);
-    };
-    d.head.appendChild(script);
-  })(document, "script", "1234567890123", {
-    accentColor: "#ff5733", // Optional custom styling
-    containerId: "expeerly-video-container", // ID of the container div
-  });
+  !function(w,d,g){var s=d.createElement('script');s.src='https://expeerly.com/embed.js';s.async=true;s.dataset.gtin=g;d.body.appendChild(s)}(window,document,'YOUR_PRODUCT_GTIN');
 </script>
-<div id="expeerly-video-container"></div>
 ```
 
-### Hosted Embed Script (embed.js)
+That's it! The Expeerly script will automatically:
+- Check for available video reviews
+- Add videos to your product carousel if available
+- Create a review block with detailed information
+- Add a summary button above the fold
+- Handle all analytics tracking
 
-The hosted script fetches metadata from the middleware and dynamically renders the video player and reviewer details.
+## Features
 
-### Script Example
-```javascript
-const ExpeerlyEmbed = (() => {
-  async function fetchVideoData(gtin) {
-    const response = await fetch(`https://expeerly.com/api/video-data?gtin=${gtin}`);
-    if (!response.ok) throw new Error("Failed to fetch video data");
-    return response.json();
-  }
+The integration automatically provides:
+- Video reviews in your product image carousel
+- Detailed review block including:
+  - Star ratings
+  - Reviewer names and profile pictures
+  - View counts
+  - Expeerly branding
+- Above-fold summary button linking to review block
+- Built-in analytics tracking
+- Zero-impact when no videos are available
 
-  function renderStars(rating) {
-    const fullStar = "⭐";
-    const emptyStar = "☆";
-    return fullStar.repeat(Math.floor(rating)) + emptyStar.repeat(5 - Math.floor(rating));
-  }
+## Customization
 
-  function renderContent(data, options) {
-    const container = document.getElementById(options.containerId || "expeerly-video-container");
-    if (!container) throw new Error("Container not found");
+To customize the appearance of the Expeerly integration, you can add optional data attributes to your script tag:
 
-    container.innerHTML = `
-      <div style="max-width: 640px; margin: 20px auto; font-family: Arial, sans-serif; text-align: left;">
-        <mux-player
-          playback-id="${data.playbackId}"
-          metadata-video-title="${data.videoTitle}"
-          style="width: 100%; border-radius: 8px;"
-          accent-color="${options.accentColor || "#ea580c"}">
-        </mux-player>
-        <div style="margin-top: 10px; display: flex; align-items: center;">
-          <img src="https://via.placeholder.com/50" alt="${data.reviewerName}" style="border-radius: 50%; width: 50px; height: 50px; margin-right: 10px;">
-          <div>
-            <p><strong>${data.reviewerName}</strong> from ${data.location}</p>
-            <p style="color: gold;">${renderStars(data.rating)} (${data.rating} / 5)</p>
-          </div>
-        </div>
-        <div style="text-align: center; margin-top: 10px;">
-          <img src="https://example.com/expeerly-logo.svg" alt="Expeerly Logo" style="width: 100px;">
-        </div>
-      </div>
-    `;
-  }
-
-  return {
-    async init(gtin, options = {}) {
-      try {
-        const data = await fetchVideoData(gtin);
-        renderContent(data, options);
-      } catch (error) {
-        console.error("Expeerly Embed Error:", error);
-      }
-    },
-  };
-})();
-```
-
-### Customization Options
-
-Retailers can customize the embed by passing options:
-
-- **accentColor**: Adjust the Mux Player theme color.
-- **containerId**: Specify the container where the content is rendered.
-
-### API Response Example
-
-Middleware returns standardized JSON:
-
-```json
-{
-  "playbackId": "EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs",
-  "videoTitle": "Expeerly Review for Product XYZ",
-  "reviewerName": "John",
-  "location": "Zurich, Switzerland",
-  "rating": 4.5,
-  "reviewText": "Great product, highly recommended!",
-  "gtin": "1234567890123"
-}
-```
-
-# View Tagging with Mux Data (Separate Option)
-
-## To track video views by shop using Mux Data:
-
-### Configuration in Mux Dashboard
-#### Enable Custom Dimensions:
-1. Go to **Settings > Custom Dimensions** in the Mux dashboard. [See mux docs](https://docs.mux.com/guides/extend-data-with-custom-metadata)
-2. Configure a dimension (e.g., `custom_1`) with a display name like **Shop ID**.
-
----
-
-### Embedding Metadata in the Video Player
-
-#### Option 1: Using `<mux-video>` Element
 ```html
-<mux-video
-  playback-id="Heq3vyLty8Q02H01kZ01ZvVcj7NMjLcBHi721V4bkZt75A"
-  env-key="YOUR_ENV_KEY"
-  metadata-custom-1="shop-id-001" <!-- Unique Shop Identifier -->
-  controls>
-</mux-video>
+<script 
+  src="https://expeerly.com/embed.js" 
+  data-gtin="YOUR_PRODUCT_GTIN"
+  data-accent-color="#FF5733"
+  data-language="en"
+  data-display="both"
+  async>
+</script>
 ```
 
-#### Option 2: Using JavaScript SDK
-```
-mux.monitor('#video-element', {
-  data: {
-    env_key: 'YOUR_ENV_KEY',
-    video_id: 'video-id-1234',
-    video_title: 'Product Demo',
-    custom_1: 'shop-id-001' // Unique Shop Identifier
-  }
-});
-```
+Available data attributes:
+- `data-display`: Control display mode ('carousel', 'block', or 'both')
+- `data-accent-color`: Customize the brand color
+- `data-language`: Set the interface language
+
+## Performance
+
+The Expeerly script is designed for optimal performance:
+- Automatically loads only when needed
+- No impact on page load if no videos are available
+- Asynchronous loading of all resources
+- Efficient use of the Mux Player SDK
+
+## Support
+
+For implementation assistance or technical support:
+- Email: support@expeerly.com
+- Dashboard: https://dashboard.expeerly.com/support
