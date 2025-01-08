@@ -13,7 +13,9 @@ Add the Mux Player SDK to your website's `<head>` section. This is required to p
 ```
 #### Option 2: Integrating with React Applications
 Installation via npm:
-`npm install @mux/mux-player-react`
+```
+npm install @mux/mux-player-react
+```
 and add to your product pages:
 ```
 import React from 'react';
@@ -36,7 +38,9 @@ export default VideoPlayer;
 ```
 #### Option 3: Utilizing Mux with Video.js
 Installation via npm:
-`npm install video.js @mux/videojs-mux`
+```
+npm install video.js @mux/videojs-mux
+```
 and add to your product pages:
 ```
 import videojs from 'video.js';
@@ -56,6 +60,7 @@ mux(player, {
   },
 });
 ```
+Find the full documentation for the mux video player [here](https://www.mux.com/docs/guides/mux-player-web).
 
 ### Step 2: Get Your Integration Script
 
