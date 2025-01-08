@@ -121,7 +121,7 @@ Available data attributes:
 
 ## What the embed.js does
 ```
-(function() {
+const expeerly = (function() {
   // Configuration 
   const BUBBLE_API = 'https://appname.bubbleapps.io/api/1.1/obj/videos';
   const DEFAULT_OPTIONS = {
