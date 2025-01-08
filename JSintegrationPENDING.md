@@ -4,6 +4,8 @@ This guide explains how to integrate Expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
+Version 1.2, 08th of January 2025
+
 ## Features
 
 The integration automatically provides:
