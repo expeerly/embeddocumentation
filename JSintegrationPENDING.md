@@ -4,7 +4,7 @@ This guide explains how to integrate Expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.2, 08th of January 2025
+Version 1.2, 10th of January 2025
 
 ## Features
 
@@ -20,63 +20,15 @@ The integration automatically provides:
 
 ## Integration Steps
 
-### Step 1: Install Mux Player
-You do not need to create a mux account to do this.
-
-#### Option 1: Using the Mux Player Web Component
-Add the Mux Player SDK to your website's `<head>` section. This is required to play the video reviews:
-```html
-<script src="https://unpkg.com/@mux/mux-player"></script>
-```
-#### Option 2: Integrating with React Applications
-Installation via npm:
-```
-npm install @mux/mux-player-react
-```
-and add to your product pages:
-```
-import React from 'react';
-import MuxPlayer from '@mux/mux-player-react';
-
-function VideoPlayer() {
-  return (
-    <MuxPlayer
-      playbackId="FROM_EXPEERLY"
-      ...
-      }}
-    />
-  );
-}
-
-export default VideoPlayer;
-```
-#### Option 3: Utilizing Mux with Video.js
-Installation via npm:
-```
-npm install video.js @mux/videojs-mux
-```
-and add to your product pages:
-```
-import videojs from 'video.js';
-import mux from '@mux/videojs-mux';
-
-const player = videojs('video-element-id');
-player.src({
-  src: 'https://stream.mux.com/FROM_EXPEERLY.m3u8',
-  type: 'application/x-mpegURL',
-});
-
-mux(player, {
-  data: {
-  ...
-  },
-});
-```
-Find the full documentation for the mux video player [here](https://www.mux.com/docs/guides/mux-player-web).
-
-### Step 2: Get Your Integration Script
+### Step 1: Get Your Integration Script
 
 Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.
+
+### Step 2: Add the Script to the Head Section
+Add the following code snippet to your head section in your html code
+```html
+<script src="https://www.expeerly.com/embed.js"></script>
+```
 
 ### Step 3: Add the Script to Your Product Pages
 
@@ -85,8 +37,14 @@ Add your unique integration script to your product page template just before the
 ```html
 <!-- This is an example. Get your actual script from the Expeerly dashboard -->
 <script>
-  !function(w,d,g){var s=d.createElement('script');s.src='https://expeerly.com/embed.js';s.async=true;s.dataset.gtin=g;d.body.appendChild(s)}(window,document,'YOUR_PRODUCT_GTIN');
+    expeerly()
 </script>
+```
+
+### Step 4: Add the Script to Your Product Pages
+Add the experly HTML Tag(with the gtin as an attribute) where ever you want to have experely videos shown:
+```html
+<expeerly gtin="123456789012"></expeerly>
 ```
 
 That's it! The Expeerly script will automatically:
@@ -98,23 +56,26 @@ That's it! The Expeerly script will automatically:
 
 ## Customization
 
-To customize the appearance of the Expeerly integration, you can add optional data attributes to your script tag:
+To globally customize the appearance of the Expeerly integration, you can add optional data attributes to your script tag:
 
 ```html
-<script 
-  src="https://expeerly.com/embed.js" 
-  data-gtin="YOUR_PRODUCT_GTIN"
-  data-accent-color="#2C1277"
-  data-language="en"
-  data-display="both"
-  async>
+<script>
+    expeerly({accentColor: "#2C1277", locale: "en"})
 </script>
 ```
 
+To customize individual integrations you can add attributes to the expeerly HTML Tag:
+
+```html
+<expeerly data-videoonly="true" data-theme="dark" data-max="12"></expeerly>
+```
+
 Available data attributes:
-- `data-display`: Control display mode ('carousel', 'block', or 'both')
-- `data-accent-color`: Customize the brand color
-- `data-language`: Set the interface language
+| Name | Type | Description | Default |
+| -------- | ------- | -------- | ------- |
+| videoonly | true / false | wether to show the data as carousel or as videos | false |
+| theme | dark / light | what them should be used | light |
+| max | number | how many reviews should be loaded | undefined |
 
 ## What the embed.js does
 ```
