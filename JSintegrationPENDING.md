@@ -32,7 +32,7 @@ Add the following code snippet to your head section in your html code
 
 ### Step 3: Add the Script to Your Product Pages
 
-Add your unique integration script to your product page template just before the closing `</body>` tag:
+Add the script to your product page template just before the closing `</body>` tag:
 
 ```html
 <!-- This is an example. Get your actual script from the Expeerly dashboard -->
@@ -63,6 +63,11 @@ To globally customize the appearance of the Expeerly integration, you can add op
     expeerly({accentColor: "#2C1277", locale: "en"})
 </script>
 ```
+Available configurations:
+| Name | Type | Description | Default |
+| :--- | :--- | :---- | :--- |
+| accentColor | any color like hex / rgba / hsl | set the accent color for the main color | undefined |
+| locale | en / de / fr | for now we provide three languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language | en |
 
 To customize individual integrations you can add attributes to the expeerly HTML Tag:
 
@@ -72,7 +77,7 @@ To customize individual integrations you can add attributes to the expeerly HTML
 
 Available data attributes:
 | Name | Type | Description | Default |
-| -------- | ------- | -------- | ------- |
+| :--- | :--- | :--- | :--- |
 | videoonly | true / false | wether to show the data as carousel or as videos | false |
 | theme | dark / light | what them should be used | light |
 | max | number | how many reviews should be loaded | undefined |
