@@ -4,7 +4,7 @@ This guide explains how to integrate Expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.2, 08th of January 2025
+Version 1.2, 10th of January 2025
 
 ## Features
 
@@ -20,73 +20,31 @@ The integration automatically provides:
 
 ## Integration Steps
 
-### Step 1: Install Mux Player
-You do not need to create a mux account to do this.
-
-#### Option 1: Using the Mux Player Web Component
-Add the Mux Player SDK to your website's `<head>` section. This is required to play the video reviews:
-```html
-<script src="https://unpkg.com/@mux/mux-player"></script>
-```
-#### Option 2: Integrating with React Applications
-Installation via npm:
-```
-npm install @mux/mux-player-react
-```
-and add to your product pages:
-```
-import React from 'react';
-import MuxPlayer from '@mux/mux-player-react';
-
-function VideoPlayer() {
-  return (
-    <MuxPlayer
-      playbackId="FROM_EXPEERLY"
-      ...
-      }}
-    />
-  );
-}
-
-export default VideoPlayer;
-```
-#### Option 3: Utilizing Mux with Video.js
-Installation via npm:
-```
-npm install video.js @mux/videojs-mux
-```
-and add to your product pages:
-```
-import videojs from 'video.js';
-import mux from '@mux/videojs-mux';
-
-const player = videojs('video-element-id');
-player.src({
-  src: 'https://stream.mux.com/FROM_EXPEERLY.m3u8',
-  type: 'application/x-mpegURL',
-});
-
-mux(player, {
-  data: {
-  ...
-  },
-});
-```
-Find the full documentation for the mux video player [here](https://www.mux.com/docs/guides/mux-player-web).
-
-### Step 2: Get Your Integration Script
+### Step 1: Get Your Integration Script
 
 Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.
 
+### Step 2: Add the Script to the Head Section
+Add the following code snippet to your head section in your html code
+```html
+<script src="https://www.expeerly.com/embed.js"></script>
+```
+
 ### Step 3: Add the Script to Your Product Pages
 
-Add your unique integration script to your product page template just before the closing `</body>` tag:
+Add the script to your product page template just before the closing `</body>` tag:
 
 ```html
 <!-- This is an example. Get your actual script from the Expeerly dashboard -->
 <script>
-  !function(w,d,g){var s=d.createElement('script');s.src='https://expeerly.com/embed.js';s.async=true;s.dataset.gtin=g;d.body.appendChild(s)}(window,document,'YOUR_PRODUCT_GTIN');
+    expeerly()
 </script>
+```
+
+### Step 4: Add the expeerly component to Your Product Pages
+Add the experly html element(with the gtin as an attribute) where ever you want to have experely videos shown:
+```html
+<expeerly gtin="123456789012"></expeerly>
 ```
 
 That's it! The Expeerly script will automatically:
@@ -98,237 +56,36 @@ That's it! The Expeerly script will automatically:
 
 ## Customization
 
-To customize the appearance of the Expeerly integration, you can add optional data attributes to your script tag:
+To globaly customize the appearance of the Expeerly integration, you can add optional data attributes to your script tag:
 
 ```html
-<script 
-  src="https://expeerly.com/embed.js" 
-  data-gtin="YOUR_PRODUCT_GTIN"
-  data-accent-color="#2C1277"
-  data-language="en"
-  data-display="both"
-  async>
+<script>
+    expeerly({accentColor: "#2C1277", locale: "en"})
 </script>
+```
+Available configurations:
+| Name | Type | Description | Default |
+| :--- | :--- | :---- | :--- |
+| accentColor | any color like hex / rgba / hsl | set the accent color for the main color | undefined |
+| locale | en / de / fr | for now we provide three languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language | en |
+
+To customize individual integrations you can add attributes to the expeerly html element:
+
+```html
+<expeerly data-videoonly="true" data-theme="dark" data-max="12"></expeerly>
 ```
 
 Available data attributes:
-- `data-display`: Control display mode ('carousel', 'block', or 'both')
-- `data-accent-color`: Customize the brand color
-- `data-language`: Set the interface language
+| Name | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| videoonly | true / false | wether to show the data as carousel or as videos | false |
+| theme | dark / light | what them should be used | light |
+| max | number | how many reviews should be loaded | undefined |
 
 ## What the embed.js does
-```
-const expeerly = (function() {
-  // Configuration 
-  const BUBBLE_API = 'https://appname.bubbleapps.io/api/1.1/obj/videos';
-  const DEFAULT_OPTIONS = {
-    display: 'both',
-    accentColor: '#2C1277',
-    language: 'en'
-  };
+The script
+- creates a video player from [mux](https://www.mux.com/) and streams the videos from the mux server.
+- makes a request on [bubble.io](https://bubble.io/) to get all important data for the reviews.
+- replaces all expeerly html elements on the page with the carousel or the videos.
 
-  // Helper to create elements with classes
-  const createElement = (tag, className = '') => {
-    const element = document.createElement(tag);
-    if (className) element.className = className;
-    return element;
-  };
-
-  // Get data attributes from script tag
-  const getScriptOptions = () => {
-    const script = document.currentScript;
-    return {
-      gtin: script.dataset.gtin,
-      display: script.dataset.display || DEFAULT_OPTIONS.display,
-      accentColor: script.dataset.accentColor || DEFAULT_OPTIONS.accentColor,
-      language: script.dataset.language || DEFAULT_OPTIONS.language
-    };
-  };
-
-  // Create summary button
-  const createSummaryButton = (rating, reviewCount) => {
-    const button = createElement('button', 'expeerly-summary-btn');
-    button.innerHTML = `
-      <img src="https://expeerly.com/logo.svg" alt="Expeerly" class="expeerly-logo">
-      <span>${rating.toFixed(1)} ★ (${reviewCount} reviews)</span>
-    `;
-    button.onclick = () => {
-      document.querySelector('.expeerly-review-block').scrollIntoView({ behavior: 'smooth' });
-    };
-    return button;
-  };
-
-  // Create carousel item
-  const createCarouselItem = (video) => {
-    const container = createElement('div', 'expeerly-carousel-item');
-    container.innerHTML = `
-      <mux-player
-        playback-id="${video.playbackId}"
-        metadata-video-title="${video.videoTitle}"
-        metadata-custom-1="${video.shopId}"
-        stream-type="on-demand"
-        prefer-playback="mse"
-        style="width: 100%; aspect-ratio: 9/16;">
-      </mux-player>
-    `;
-    return container;
-  };
-
-  // Create review block item
-  const createReviewBlockItem = (video) => {
-    const container = createElement('div', 'expeerly-review-item');
-    container.innerHTML = `
-      <div class="expeerly-review-header">
-        <img src="${video.profilePicture}" alt="${video.reviewerName}" class="expeerly-reviewer-pic">
-        <div class="expeerly-reviewer-info">
-          <div class="expeerly-reviewer-name">${video.reviewerName}</div>
-          <div class="expeerly-rating">${'★'.repeat(Math.floor(video.rating))}${'☆'.repeat(5 - Math.floor(video.rating))}</div>
-        </div>
-        <div class="expeerly-views">${video.viewCount} views</div>
-      </div>
-      <mux-player
-        playback-id="${video.playbackId}"
-        metadata-video-title="${video.videoTitle}"
-        metadata-custom-1="${video.shopId}"
-        stream-type="on-demand"
-        prefer-playback="mse"
-        style="width: 100%; aspect-ratio: 9/16;">
-      </mux-player>
-      <div class="expeerly-info">
-        Expeerly is an independent review community and service. <a href="https://expeerly.com" target="_blank">Learn more</a>.
-      </div>
-    `;
-    return container;
-  };
-
-  // Main initialization function
-  const init = async () => {
-    const options = getScriptOptions();
-    
-    try {
-      // Fetch videos from Bubble API
-      const response = await fetch(`${BUBBLE_API}?gtin=${options.gtin}`);
-      const data = await response.json();
-      
-      if (!data.results || data.results.length === 0) {
-        return; // No videos available
-      }
-
-      const videos = data.results;
-      const averageRating = videos.reduce((acc, v) => acc + v.rating, 0) / videos.length;
-
-      // Create and insert summary button
-      const summaryButton = createSummaryButton(averageRating, videos.length);
-      document.body.appendChild(summaryButton);
-
-      // Handle carousel integration if enabled
-      if (options.display === 'carousel' || options.display === 'both') {
-        const productCarousel = document.querySelector('[data-product-carousel]');
-        if (productCarousel) {
-          videos.forEach(video => {
-            productCarousel.appendChild(createCarouselItem(video));
-          });
-        }
-      }
-
-      // Handle review block if enabled
-      if (options.display === 'block' || options.display === 'both') {
-        const reviewBlock = createElement('div', 'expeerly-review-block');
-        videos.forEach(video => {
-          reviewBlock.appendChild(createReviewBlockItem(video));
-        });
-        document.body.appendChild(reviewBlock);
-      }
-
-    } catch (error) {
-      console.error('Expeerly initialization error:', error);
-    }
-  };
-
-  // Add styles
-  const styles = document.createElement('style');
-  styles.textContent = `
-    .expeerly-summary-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
-      border-radius: 8px;
-      background: #2C1277;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .expeerly-logo {
-      height: 24px;
-    }
-
-    .expeerly-review-block {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding: 24px;
-      max-width: 768px;
-      margin: 0 auto;
-    }
-
-    .expeerly-review-item {
-      border: 1px solid #2C1277;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .expeerly-review-header {
-      display: flex;
-      align-items: center;
-      padding: 12px;
-      gap: 12px;
-    }
-
-    .expeerly-reviewer-pic {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .expeerly-reviewer-info {
-      flex: 1;
-    }
-
-    .expeerly-rating {
-      color: #FFC122;
-    }
-
-    .expeerly-views {
-      color: white;
-      font-size: 14px;
-    }
-
-    .expeerly-carousel-item {
-      width: 100%;
-      aspect-ratio: 9/16;
-    }
-
-    .expeerly-info {
-      margin-top: 12px;
-      padding: 0 12px 12px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-
-    .expeerly-info a {
-      color: #2C1277;
-      text-decoration: underline;
-    }
-  `;
-  document.head.appendChild(styles);
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-})();
-```
+All styles are generated by the script and each class contains the prefix `expeerly`.
