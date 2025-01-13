@@ -67,7 +67,7 @@ Available configurations:
 | Name | Type | Description | Default |
 | :--- | :--- | :---- | :--- |
 | accentColor | any color like hex / rgba / hsl | set the accent color for the main color | undefined |
-| locale | en / de / fr | for now we provide three languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language | en |
+| locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language | en |
 
 To customize individual integrations you can add attributes to the expeerly html element:
 
@@ -78,7 +78,7 @@ To customize individual integrations you can add attributes to the expeerly html
 Available data attributes:
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| videoonly | true / false | wether to show the data as carousel or as videos | false |
+| reviewblockonly | true / false | wether to show the data in the carousel and as review block or only review block | false |
 | theme | dark / light | what them should be used | light |
 | max | number | how many reviews should be loaded | undefined |
 
