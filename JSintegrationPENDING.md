@@ -79,7 +79,7 @@ Available data attributes:
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
 | reviewblockonly | true / false | wether to show the data in the carousel and as review block or only review block | false |
-| theme | dark / light | what them should be used | light |
+| theme | dark / light / min | what them should be used | dark |
 | max | number | how many reviews should be loaded | undefined |
 
 ## What the embed.js does
