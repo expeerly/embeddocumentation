@@ -42,7 +42,7 @@ Add the script to your product page template just before the closing `</body>` t
 ```
 
 ### Step 4: Add the expeerly component to Your Product Pages
-Add the experly html element(with the gtin as an attribute) where ever you want to have experely videos shown:
+Add the experly html element(with the gtin/ean/upc as an attribute) where ever you want to have experely videos shown:
 ```html
 <expeerly gtin="123456789012"></expeerly>
 ```
