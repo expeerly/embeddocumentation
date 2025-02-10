@@ -73,7 +73,7 @@ For Shopify product pages, Mux videos can be embedded dynamically using Metafiel
 3. Click Save.
 Now, when you edit a product, you'll see a Mux Video URL field where you can enter a unique streaming link.
 
-#### Step 2: Modify Your Shopify Product Page Template
+#### Step 2: Modify Your Shopify Product Page Template
 1. Go to Shopify Admin > Online Store > Themes.
 2. Click Customize on your active theme.
 3. Navigate to Product Pages.
