@@ -60,6 +60,81 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
+### 3.5 Embedding Mux Videos in Shopify
+
+For Shopify product pages, Mux videos can be embedded dynamically using Metafields.
+
+#### Step 1: Add a Metafield for Mux Video Links
+
+Go to Shopify Admin > Settings > Custom Data > Products.
+
+Click "Add Definition".
+
+Name: Mux Video URL
+
+Namespace & Key: custom.mux_video
+
+Type: URL or Text (if URL isn't available).
+
+Click Save.
+
+Now, when you edit a product, you'll see a Mux Video URL field where you can enter a unique streaming link.
+
+#### Step 2: Modify Your Shopify Product Page Template
+
+Go to Shopify Admin > Online Store > Themes.
+
+Click Customize on your active theme.
+
+Navigate to Product Pages.
+
+Add a Custom Liquid block and paste this code:
+```
+{% if product.metafields.custom.mux_video %}
+  <div class="mux-video-wrapper">
+    <video controls playsinline>
+      <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+{% endif %}
+```
+Click Save.
+
+#### Step 3: Add Individual Mux Links to Each Product
+
+Go to Shopify Admin > Products.
+
+Open a product and scroll to the Metafields section.
+
+Find Mux Video URL and enter your Mux streaming link (e.g., https://stream.mux.com/.../high.mp4).
+
+Click Save.
+
+#### Step 4: Improve Styling for Centered 9:16 Video
+
+Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
+```
+.mux-video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 225px; /* Adjust based on your design */
+  margin: 20px auto; /* Centers the video block */
+  aspect-ratio: 9 / 16; /* Ensures strict 9:16 aspect ratio */
+}
+
+.mux-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  max-height: 400px; /* Ensures it stays within reasonable size */
+  object-fit: cover; /* Ensures the video properly fills the frame */
+  border-radius: 8px; /* Optional rounded corners */
+}
+```
+Now, every Shopify product with a Mux video URL in its metafield will automatically display a centered, responsive, 9:16 video.
+
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
 As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to 100 videos a month.
