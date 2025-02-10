@@ -78,16 +78,16 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 2. Click Customize on your active theme.
 3. Navigate to Product Pages.
 4. Add a Custom Liquid block and paste this code:
-        ```
-        {% if product.metafields.custom.mux_video %}
-          <div class="mux-video-wrapper">
-            <video controls playsinline>
-              <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        {% endif %}
-        ```
+```
+{% if product.metafields.custom.video_url %}
+    <video controls width="100%" preload="none">
+        <source src="{{ product.metafields.custom.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+{% else %}
+    <p>No video available for this product.</p>
+{% endif %}
+```
 5. Click Save.
 
 #### Step 3: Add Individual Mux Links to Each Product
