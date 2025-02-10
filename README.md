@@ -66,17 +66,12 @@ For Shopify product pages, Mux videos can be embedded dynamically using Metafiel
 
 #### Step 1: Add a Metafield for Mux Video Links
 
-Go to Shopify Admin > Settings > Custom Data > Products.
-
-Click "Add Definition".
-
-Name: Mux Video URL
-
-Namespace & Key: custom.mux_video
-
-Type: URL or Text (if URL isn't available).
-
-Click Save.
+1. Go to Shopify Admin > Settings > Custom Data > Products.
+2. Click "Add Definition".
+  Name: `Mux Video URL`
+  Namespace & Key: `custom.mux_video`
+  Type: URL or Text (if URL isn't available).
+  Click Save.
 
 Now, when you edit a product, you'll see a Mux Video URL field where you can enter a unique streaming link.
 
