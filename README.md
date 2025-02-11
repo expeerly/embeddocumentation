@@ -1,7 +1,7 @@
 # Embedding Expeerly Videos on Online Shops or Marketplaces: Developer Guide
 This guide provides an overview of how to embed [expeerly videos](https://expeerly.com) into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. The main placement for this way of embedding is the product detail page but any placement is possible. Embedding via any of the solutions is free of charge for you as retail partner.
 
-Version 1.2, 10th of October 2024
+Version 1.3, 11th of February 2025
 
 ## 1. Options: Youtube or Mux
 Expeerly offers 2 Video Embedding Solutions via [Youtube](https://www.youtube.com/) Embed Links or via [Mux](https://www.mux.com/).
@@ -62,7 +62,7 @@ We recommend embedding the videos to the carousel or product description just ne
 
 ### 3.5 Embedding Mux Videos in Shopify
 
-For Shopify product pages, Mux videos can be embedded dynamically using Metafields. Please check this quick video walkthrough with our shopify demo shop by clicking [this link]([url](https://jumpshare.com/v/TJ6f0l65oo9DyHn4KHC3)).
+For Shopify product pages, Mux videos can be embedded dynamically using Metafields. Please check this quick video walkthrough with our shopify demo shop by clicking [this link](https://jumpshare.com/v/TJ6f0l65oo9DyHn4KHC3).
 
 #### Step 1: Add a Metafield for Mux Video Links
 1. Go to Shopify Admin > Settings > Custom Data > Products.
