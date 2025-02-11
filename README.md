@@ -62,7 +62,7 @@ We recommend embedding the videos to the carousel or product description just ne
 
 ### 3.5 Embedding Mux Videos in Shopify
 
-For Shopify product pages, Mux videos can be embedded dynamically using Metafields.
+For Shopify product pages, Mux videos can be embedded dynamically using Metafields. Please check this quick video walkthrough with our shopify demo shop: 
 
 #### Step 1: Add a Metafield for Mux Video Links
 1. Go to Shopify Admin > Settings > Custom Data > Products.
@@ -93,7 +93,7 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 #### Step 3: Add Individual Mux Links to Each Product
 1. Go to Shopify Admin > Products.
 2. Open a product and scroll to the Metafields section.
-3. Find Mux Video URL on your expeerly campaign page and enter your Mux streaming link (e.g., https://stream.mux.com/.../high.mp4).
+3. Find Mux Video URL on your expeerly campaign page. Go to your campaign, then "Submitted Assets", "See details" and click the chain icon. Copy the your Mux streaming link from the new tab (e.g., https://stream.mux.com/.../high.mp4) and add to the Metafield.
 4. Click Save.
 
 #### Step 4: Improve Styling for Centered 9:16 Video
