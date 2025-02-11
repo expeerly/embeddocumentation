@@ -90,13 +90,13 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 ```
 5. Click Save.
 
-#### Step 3: Add Individual Mux Links to Each Product
+#### Step 3: Add Individual Streaming Links to Each Product
 1. Go to Shopify Admin > Products.
 2. Open a product and scroll to the Metafields section.
-3. Find Mux Video URL on your expeerly campaign page. Go to your campaign, then "Submitted Assets", "See details" and click the chain icon. Copy the your Mux streaming link from the new tab (e.g., https://stream.mux.com/.../high.mp4) and add to the Metafield.
+3. Find Streaming Video URL on your expeerly campaign page. Go to your campaign, then "Submitted Assets", "See details" and click the chain icon. Copy the your Mux streaming link from the new tab (e.g., https://stream.mux.com/.../high.mp4) and add to the Metafield. Altneratively, go to [expeerly.com](https://expeerly.com) and under "Share" of any video, you find the embed code and streaming link.
 4. Click Save.
 
-#### Step 4: Improve Styling for Centered 9:16 Video
+#### Step 4: Suggested Styling for Centered 9:16 Video
 
 Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
 ```
@@ -118,7 +118,7 @@ Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
   border-radius: 8px; /* Optional rounded corners */
 }
 ```
-Now, every Shopify product with a Mux video URL in its metafield will automatically display a centered, responsive, 9:16 video.
+Feel free to improve this implementation further.
 
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
