@@ -83,6 +83,7 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 ```
 {% if product.metafields.custom.mux_video %}
     <div class="mux-video-container">
+        <h2 class="mux-video-title">Expeerly Reviews</h2>
         <div class="mux-video-wrapper">
             <video controls preload="none">
                 <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
@@ -106,13 +107,21 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 
 Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
 ```
-/* Container to center the video */
+/* Container to center the video and title */
 .mux-video-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 20px auto;
+}
+
+/* Title styling */
+.mux-video-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 /* Wrapper to maintain 9:16 aspect ratio */
