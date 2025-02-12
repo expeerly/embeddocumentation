@@ -82,10 +82,12 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 4. Add a Custom Liquid block and paste this code:
 ```
 {% if product.metafields.custom.mux_video %}
-    <video controls width="100%" preload="none">
-        <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div class="mux-video-wrapper">
+        <video controls width="100%" preload="none">
+            <source src="{{ product.metafields.custom.mux_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 {% else %}
     <p>No video available for this product.</p>
 {% endif %}
