@@ -106,22 +106,31 @@ Now, when you edit a product, you'll see a Mux Video URL field where you can ent
 
 Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
 ```
-.mux-video-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 225px; /* Adjust based on your design */
-  margin: 20px auto; /* Centers the video block */
-  aspect-ratio: 9 / 16; /* Ensures strict 9:16 aspect ratio */
+/* Container to center the video */
+.mux-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
 }
 
+/* Wrapper to maintain 9:16 aspect ratio */
+.mux-video-wrapper {
+    position: relative;
+    width: 225px; /* Adjust width based on design */
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Video styling */
 .mux-video-wrapper video {
-  width: 100%;
-  height: 100%;
-  max-height: 400px; /* Ensures it stays within reasonable size */
-  object-fit: cover; /* Ensures the video properly fills the frame */
-  border-radius: 8px; /* Optional rounded corners */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video properly fills the frame */
+    border-radius: 8px; /* Optional rounded corners */
 }
 ```
 Feel free to improve this implementation further.
