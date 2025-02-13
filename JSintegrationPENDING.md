@@ -72,17 +72,17 @@ Available configurations:
 To customize individual integrations you can add attributes to the expeerly html element:
 
 ```html
-<expeerly data-videoonly="true" data-theme="dark" data-max="12"></expeerly>
+<expeerly data-type="badge" data-theme="dark" data-max="12"></expeerly>
 ```
 
 Available data attributes:
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| reviewblockonly | true / false | wether to show the data in the carousel and as review block or only review block | false |
-| theme | dark / light / min | what them should be used | dark |
+| type | badge / carousel / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
+| theme | dark / light / miniminal | select the theme (background colour) | dark |
 | max | number | how many reviews should be loaded | undefined |
 
-## What the embed.js does
+## What the expeerly.js does
 The script
 - creates a video player from [mux](https://www.mux.com/) and streams the videos from the mux server.
 - makes a request on [bubble.io](https://bubble.io/) to get all important data for the reviews.
