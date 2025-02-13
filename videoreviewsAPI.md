@@ -1,6 +1,6 @@
 # Expeerly Video Review Integration Guide
 
-This guide explains how to integrate expeerly video reviews into your product pages. The integration enables both carousel-style video reviews and a detailed review block through a simple script integration. You can check this example integration [here](https://kzmqtz1cbdx3ffi3xyyt.lite.vusercontent.net/).
+This guide explains how to integrate expeerly video reviews into your product pages. The integration enables both carousel-style video reviews and a detailed review block through a simple script integration. You can check this example integration [here](https://kzmphf59qfimj11tatlm.lite.vusercontent.net/).
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
