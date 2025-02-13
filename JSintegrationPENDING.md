@@ -27,7 +27,7 @@ Log into your Expeerly dashboard and copy your unique integration script. This s
 ### Step 2: Add the Script to the Head Section
 Add the following code snippet to your head section in your html code
 ```html
-<script src="https://www.expeerly.com/embed.js"></script>
+<script src="https://www.expeerly.com/expeerly.js"></script>
 ```
 
 ### Step 3: Add the Script to Your Product Pages
