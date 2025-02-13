@@ -13,7 +13,7 @@ The integration automatically provides:
 - Detailed review block including:
   - Star ratings
   - Reviewer names and profile pictures
-  - View counts
+  - View counts (pending)
   - Expeerly branding
 - Above-fold summary button linking to review block
 - Zero-impact when no videos are available
