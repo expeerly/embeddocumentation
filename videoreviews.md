@@ -20,9 +20,11 @@ The integration automatically provides:
 
 ## Integration Steps
 
-### Step 1: Get Your Integration Script (pending)
+### Step 1: Get Your Integration Script
 
-~Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.~ PENDING For beta integration, get in touch with the expeerly team directly.
+~Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.~ PENDING 
+
+For the beta phase, get in touch with the expeerly team directly. The script is publicly available for now.
 
 ### Step 2: Add the Script to the Head Section
 Add the following code snippet to your head section in your html code
