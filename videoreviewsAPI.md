@@ -73,6 +73,8 @@ Available data attributes:
 | type | badge / carousel / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
 | theme | dark / light / miniminal | select the theme (background colour) | dark |
 | max | number | how many reviews should be loaded | undefined |
+| accentColor | any color like hex / rgba / hsl | set the accent color for the main color (if not set, it will use the global config settings) | undefined |
+| locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
 
 ## What the expeerly.js does
 The script
