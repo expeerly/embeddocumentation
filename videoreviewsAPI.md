@@ -33,7 +33,7 @@ Add the following code snippet to your head section in your html code
 ```
 
 ### Step 3: Add the expeerly component to Your Product Pages
-Add the experly web component(with the gtin/ean/upc as an attribute) where ever you want to have experely videos shown:
+Add the experly web component (with the gtin/ean/upc as an attribute) where ever you want to have experely videos shown:
 ```html
 <expeerly-component gtin="123456789012"></expeerly-component>
 ```
