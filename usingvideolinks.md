@@ -153,8 +153,8 @@ See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBH
 ### 4.2 Retail partner portal (pending)
 We have a retail partner portal in the pipeline that will allow you to login to our [platform](https://app.expeerly.com) and see all the available videos there. 
 
-### 4.3 Public API (upon request)
-We don't offer a public API at this stage, but if you're interested in using the API, please get in touch with us on [product@expeerly.com](mailto:product@expeerly.com).
+### 4.3 Public API
+Please check [our video review API for this]([url](https://github.com/expeerly/embeddocumentation/blob/main/videoreviewsAPI.md))
 
 ### 4.4 Formats
 Expeerly videos are usually in the 9:16 vertical format on mux and 16:9 horizontal embed format on Youtube (but the content remains 9:16 in most cases). The reason for the vertical format is that about 60-70% of all shopping traffic comes from mobile devices, depending on your individual case of course.
