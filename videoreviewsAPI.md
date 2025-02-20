@@ -77,7 +77,7 @@ Available data attributes:
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
 
 ## Testing your integration
-To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `8720689021937` Philips Baby Care Set or `4008789094636` Fire Brigade Truck over the API.
+To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `8720689021937` Philips Baby Care Set or `4008789094636` Playmobil Fire Brigade Truck over the API.
 
 ## What the expeerly.js does
 The script
