@@ -29,7 +29,7 @@ For the beta phase, get in touch with the expeerly team directly at product@expe
 ### Step 2: Add the Script to the Head Section
 Add the following code snippet to your head section in your html code
 ```html
-<script src="https://www.expeerly.com/expeerly.js"></script>
+<script type="module" src="https://www.expeerly.com/expeerly.js"></script>
 ```
 
 ### Step 3: Add the expeerly component to Your Product Pages
