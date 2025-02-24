@@ -64,7 +64,7 @@ Available configurations:
 To customize individual integrations you can add attributes to the expeerly html element:
 
 ```html
-<expeerly-component type="badge" theme="dark" max="12"></expeerly-component>
+<expeerly-component type="badge" theme="dark" max-video="12"></expeerly-component>
 ```
 
 Available data attributes:
