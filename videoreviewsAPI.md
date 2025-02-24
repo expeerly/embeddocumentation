@@ -38,6 +38,12 @@ Add the experly web component (with the gtin/ean/upc as an attribute) where ever
 <expeerly-component gtin="123456789012"></expeerly-component>
 ```
 
+### Step 4: Pass your retailer tracking attribute
+In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
+```html
+<store-id="store1">
+```
+
 That's it! The Expeerly script will automatically:
 - Check for available video reviews
 - Add videos to your product carousel if available
