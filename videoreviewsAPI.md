@@ -41,7 +41,7 @@ Add the experly web component (with the gtin/ean/upc as an attribute) where ever
 ### Step 4: Pass your retailer tracking attribute
 In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
 ```html
-<store-id="store1">
+<expeerly-component gtin="123456789012" store-id="store1"></expeerly-component>
 ```
 
 That's it! The Expeerly script will automatically:
