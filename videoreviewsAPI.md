@@ -4,7 +4,7 @@ This guide explains how to integrate expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.4, 18th of February 2025
+Version 1.5, 26th of March 2025
 
 ## Features
 
@@ -51,7 +51,7 @@ That's it! The Expeerly script will automatically:
 - Add a summary button above the fold
 - Handle all analytics tracking
 
-#### Optional: Check if reviews are available without script
+### Optional: Check if reviews are available without script
 If you would like to check which GTIN/EAN/UPC numbers have a review go to ```expeerly.com/csv.html``` [here](https://expeerly.com/csv.html) and get a list of product for which video reviews are available. The list is updated in real time and have a timestamp when you access it. This can be useful if you would like to avoid loading the expeerly integration on every page.
 
 ## Customization
