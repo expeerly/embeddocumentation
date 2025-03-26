@@ -52,7 +52,7 @@ That's it! The Expeerly script will automatically:
 - Handle all analytics tracking
 
 #### Optional: Check if reviews are available without script
-If you would like to check which GTIN/EAN/UPC numbers have a review go to `expeerly.com/csv.html` and get a list of product for which video reviews are available. The list is updated in realtime. This can be useful if you would like to avoid loading the expeerly integration on every page.
+If you would like to check which GTIN/EAN/UPC numbers have a review go to ```expeerly.com/csv.html``` and get a list of product for which video reviews are available. The list is updated in realtime. This can be useful if you would like to avoid loading the expeerly integration on every page.
 
 ## Customization
 
