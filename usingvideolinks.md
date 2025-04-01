@@ -146,7 +146,7 @@ Feel free to improve this implementation further.
 
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
-As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to 100 videos a month.
+As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to ~20-30 videos a month.
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
