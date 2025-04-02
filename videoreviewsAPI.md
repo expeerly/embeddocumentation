@@ -81,9 +81,9 @@ Available data attributes:
 | :--- | :--- | :--- | :--- |
 | type | badge / carousel / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
 | theme | dark / light / miniminal | select the theme (background colour) | dark |
-| max-video | number | how many reviews should be loaded | undefined |
-| accentColor | any color like hex / rgba / hsl | set the accent color for the main color (if not set, it will use the global config settings) | undefined |
+| max-videos | number | how many reviews should be loaded | undefined |
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
+| store-id | string | What id would you want to track analytics on the video views? | undefined |
 
 ## Testing your integration
 To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `7610045010440` Koenig Micro Wave, `8720689021937` Philips Baby Care Set or `4008789094636` Playmobil Fire Brigade Truck over the API.
