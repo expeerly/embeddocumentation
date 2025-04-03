@@ -8,7 +8,7 @@ Version 1.5.1, 3rd of April 2025
 
 ## Features
 
-This is a widget style implementation that pulls data from the expeerly system and uses [mux](https://mux.com) as video streaming provider.
+This is a **widget style implementation** that pulls data from the expeerly system and uses [mux](https://mux.com) as video streaming provider.
 
 The integration automatically provides:
 - Video reviews in your product image carousel
