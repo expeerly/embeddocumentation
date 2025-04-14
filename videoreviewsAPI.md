@@ -4,13 +4,15 @@ This guide explains how to integrate expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.5.1, 3rd of April 2025
+Version 1.6, 16th of April 2025
 
 ## Features
 
-This is a **widget style implementation** that pulls data from the expeerly system and uses [mux](https://mux.com) as video streaming provider.
+Our integration offers the possibiltiy to 
+- **add video reviews directly to your image gallery** or carousel useing [mux](https://mux.com) as video streaming provider and 
+- a **widget style implementation** for a badge and a review block that pulls data from the expeerly system and uses [mux](https://mux.com) as video streaming provider.
 
-The integration automatically provides:
+The integration provides:
 - Video reviews in your product image carousel
 - Detailed review block including:
   - Star ratings
@@ -20,7 +22,21 @@ The integration automatically provides:
 - Above-fold summary button linking to review block
 - Zero-impact when no videos are available
 
-## Integration Steps
+## Integration Steps Expeerly for your Image Gallery/Carousel 
+
+### Step 1: Get API acess
+
+~Log into your Expeerly dashboard and copy the API token.~ PENDING 
+
+For the beta phase, get in touch with the expeerly team directly at product@expeerly.com. The API is publicly available for now.
+
+### Step 2: Install Mux Player (Web, iOS, Android)
+Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
+
+### Step 3: Call the expeerly API and pass your Store-ID
+Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=${GTIN/UPCnumber}`
+
+## Integration Steps Expeerly Badge/Review Block Widget
 
 ### Step 1: Get Your Integration Script
 
@@ -81,7 +97,7 @@ To customize individual integrations you can add attributes to the expeerly html
 Available data attributes:
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| type | badge / carousel / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
+| type | badge / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
 | theme | dark / light / miniminal | select the theme (background colour) | dark |
 | max-videos | number | how many reviews should be loaded | undefined |
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
