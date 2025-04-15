@@ -27,8 +27,8 @@ Version 1.6, 15th of April 2025
 ## Features
 
 Our integration offers the possibiltiy to 
-- **add video reviews directly to your image gallery** or carousel useing [mux](https://mux.com) as video streaming provider and 
-- a **widget style implementation** for a badge and a review block that pulls data from the expeerly system and uses [mux](https://mux.com) as video streaming provider.
+- **add video reviews directly to your image gallery** or carousel using [mux](https://mux.com) as video streaming provider and 
+- a **widget style implementation** for a badge and a review block that pulls data from the expeerly system and uses [mux](https://mux.com) for videos.
 
 The integration provides:
 - Video reviews in your product image carousel
