@@ -36,11 +36,41 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 ### Step 3: Call the expeerly API and pass your Store-ID
 Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=${GTIN/UPCnumber}`
 
+The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
+
+Example of returned Data:
+
+```js
+[
+    {
+      ...
+      "mux_playback_id_text": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM",
+    },
+]
+```
+
+Pass the `mux_playback_id_text` value to `playbackId`.
+
 Note: Passing a StoreId value is important to help track the Views from your store.
 
-To pass the StoreId add the metadata-custom-1 on the mux tag like below
+To pass the StoreId of value `onlineshop1` on the mux tag like below.
+
+HTML Example
 ```html
-  metadata-custom-1={storeId}
+<mux-player
+  metadata-custom-1={onlineshop1}
+></mux-player>
+```
+
+React Example
+
+```html
+<MuxPlayer
+  metadata={{
+    'custom-1': 'onlineshop1',
+  }}
+></MuxPlayer>
+
 ```
 
 
