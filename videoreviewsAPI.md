@@ -154,7 +154,7 @@ To customize individual integrations you can add attributes to the expeerly html
 Available data attributes:
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| type | badge / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
+| type | badge / reviewblock | select to show the data in the button or as review block | reviewblock |
 | theme | dark / light / miniminal | select the theme (background colour) | dark |
 | max-videos | number | how many reviews should be loaded | undefined |
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
