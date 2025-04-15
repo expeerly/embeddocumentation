@@ -75,7 +75,7 @@ Pass the `mux_playback_id_text` value to `playbackId`.
 
 **Please note:** Passing a StoreId value is mandatory to track the Views from your store. Please use the ID provided by the expeerly product team.
 
-To pass the StoreId of value `store1` on the mux tag like below.
+To pass the StoreId of value `store1` on the mux tag like check the examples below.
 
 HTML Example
 ```html
