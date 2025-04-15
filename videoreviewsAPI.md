@@ -17,7 +17,7 @@ Version 1.6, 15th of April 2025
   - [Step 1: Get Your Integration Script](#step-1-get-your-integration-script)
   - [Step 2: Add the Script to the Head Section](#step-2-add-the-script-to-the-head-section)
   - [Step 3: Add the expeerly component to Your Product Pages](#step-3-add-the-expeerly-component-to-your-product-pages)
-  - [Step 4: Pass your retailer tracking attribute](#step-4-pass-your-retailer-tracking-attribute)
+  - [Step 4: Pass your Store-ID](#step-4-pass-your-retailer-tracking-attribute)
   - [Customization](#customization)
   - [Testing your integration](#testing-your-integration)
   - [What the expeerly.js does](#what-the-expeerlyjs-does)
