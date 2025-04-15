@@ -19,7 +19,7 @@ Version 1.6, 15th of April 2025
   - [Step 3: Add the expeerly component to Your Product Pages](#step-3-add-the-expeerly-component-to-your-product-pages)
   - [Step 4: Pass your Store-ID for Tracking](#step-4-pass-your-store-id-for-tracking)
   - [Customization](#customization)
-  - [Testing your integration](#testing-your-integration)
+  - [Testing your Integration](#testing-your-integration)
   - [What the expeerly.js does](#what-the-expeerlyjs-does)
 - [Optional: Check if reviews are available for given GTIN/EAN/UPC numbers](#optional-check-if-reviews-are-available-for-given-gtineanupc-numbers)
 
@@ -160,7 +160,7 @@ Available data attributes:
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
 | store-id | string | What id would you want to track analytics on the video views? | undefined |
 
-### Testing your integration
+### Testing your Integration
 To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `7610045010440` Koenig Micro Wave, `8720689021937` Philips Baby Care Set or `4008789094636` Playmobil Fire Brigade Truck over the API.
 
 ### What the expeerly.js does
