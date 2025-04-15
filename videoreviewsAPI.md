@@ -69,7 +69,7 @@ Example of returned Data:
 
 Pass the `mux_playback_id_text` value to `playbackId`.
 
-Note: Passing a StoreId value is important to help track the Views from your store.
+Note: Passing a StoreId value is mandatory to track the Views from your store.
 
 To pass the StoreId of value `onlineshop1` on the mux tag like below.
 
