@@ -51,7 +51,9 @@ For the beta phase, get in touch with the expeerly team directly at product@expe
 ### Step 2: Install Mux Player (Web, iOS, Android)
 Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
 
-### Step 3: Call the expeerly API and pass your Store-ID
+### Step 3: Call the expeerly API and pass your Store-ID for tracking
+
+#### API call
 Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=${GTIN/UPCnumber}`
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
@@ -69,7 +71,9 @@ Example of returned data:
 
 Pass the `mux_playback_id_text` value to `playbackId`.
 
-Note: Passing a StoreId value is mandatory to track the Views from your store.
+#### Store ID for tracking
+
+**Please note:** Passing a StoreId value is mandatory to track the Views from your store. Please use the ID provided by the expeerly product team.
 
 To pass the StoreId of value `onlineshop1` on the mux tag like below.
 
@@ -112,7 +116,7 @@ Add the experly web component (with the gtin/ean/upc as an attribute) where ever
 <expeerly-component gtin="123456789012"></expeerly-component>
 ```
 
-### Step 4: Pass your retailer tracking attribute
+### Step 4: Pass your Store-ID for tracking
 In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
 ```html
 <expeerly-component gtin="123456789012" store-id="store1"></expeerly-component>
