@@ -56,7 +56,7 @@ Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-pr
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
 
-Example of returned Data:
+Example of returned data:
 
 ```js
 [
