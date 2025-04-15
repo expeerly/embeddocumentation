@@ -73,7 +73,7 @@ Pass the `mux_playback_id_text` value to `playbackId`.
 
 #### Store ID for Tracking
 
-**Please note:** Passing a StoreId value is mandatory to track the Views from your store. Please use the ID provided by the expeerly product team.
+**Please note:** In order to make sure that you, we and the brands can track where the view traffic is coming from, passing a StoreId value is mandatory to track the views from your store. Please use the ID provided by the expeerly product team.
 
 To pass the StoreId of value `store1` on the mux tag like check the examples below.
 
@@ -117,7 +117,7 @@ Add the experly web component (with the gtin/ean/upc as an attribute) where ever
 ```
 
 ### Step 4: Pass your Store-ID for Tracking
-In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
+In order to make sure that you, we and the brands can track where the view traffic is coming from, passing a StoreId value is mandatory to track the views from your store. Please use the ID provided by the expeerly product team. e.g:
 ```html
 <expeerly-component gtin="123456789012" store-id="store1"></expeerly-component>
 ```
