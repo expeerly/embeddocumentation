@@ -18,9 +18,9 @@ Version 1.6, 16th of April 2025
   - [Step 2: Add the Script to the Head Section](#step-2-add-the-script-to-the-head-section)
   - [Step 3: Add the expeerly component to Your Product Pages](#step-3-add-the-expeerly-component-to-your-product-pages)
   - [Step 4: Pass your retailer tracking attribute](#step-4-pass-your-retailer-tracking-attribute)
-- [Customization](#customization)
-- [Testing your integration](#testing-your-integration)
-- [What the expeerly.js does](#what-the-expeerlyjs-does)
+  - [Customization](#customization)
+  - [Testing your integration](#testing-your-integration)
+  - [What the expeerly.js does](#what-the-expeerlyjs-does)
 - [Optional: Check if reviews are available for given GTIN/EAN/UPC numbers](#optional-check-if-reviews-are-available-for-given-gtineanupc-numbers)
 
 
@@ -125,7 +125,7 @@ That's it! The Expeerly script will automatically:
 - Add a summary button above the fold
 - Handle all analytics tracking
 
-## Customization
+### Customization
 
 To globaly customize the appearance of the Expeerly integration, you can overwrite the config stored in the window object:
 
@@ -156,10 +156,10 @@ Available data attributes:
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
 | store-id | string | What id would you want to track analytics on the video views? | undefined |
 
-## Testing your integration
+### Testing your integration
 To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `7610045010440` Koenig Micro Wave, `8720689021937` Philips Baby Care Set or `4008789094636` Playmobil Fire Brigade Truck over the API.
 
-## What the expeerly.js does
+### What the expeerly.js does
 The script
 - creates a video player from [mux](https://www.mux.com/) and streams the videos from the mux server.
 - makes a request on the backend to get all important data for the reviews.
