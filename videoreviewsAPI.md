@@ -17,7 +17,7 @@ Version 1.6, 15th of April 2025
   - [Step 1: Get Your Integration Script](#step-1-get-your-integration-script)
   - [Step 2: Add the Script to the Head Section](#step-2-add-the-script-to-the-head-section)
   - [Step 3: Add the expeerly component to Your Product Pages](#step-3-add-the-expeerly-component-to-your-product-pages)
-  - [Step 4: Pass your Store-ID for tracking](#step-4-pass-your-store-id-for-tracking)
+  - [Step 4: Pass your Store-ID for Tracking](#step-4-pass-your-store-id-for-tracking)
   - [Customization](#customization)
   - [Testing your integration](#testing-your-integration)
   - [What the expeerly.js does](#what-the-expeerlyjs-does)
@@ -71,7 +71,7 @@ Example of returned data:
 
 Pass the `mux_playback_id_text` value to `playbackId`.
 
-#### Store ID for tracking
+#### Store ID for Tracking
 
 **Please note:** Passing a StoreId value is mandatory to track the Views from your store. Please use the ID provided by the expeerly product team.
 
@@ -116,7 +116,7 @@ Add the experly web component (with the gtin/ean/upc as an attribute) where ever
 <expeerly-component gtin="123456789012"></expeerly-component>
 ```
 
-### Step 4: Pass your Store-ID for tracking
+### Step 4: Pass your Store-ID for Tracking
 In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
 ```html
 <expeerly-component gtin="123456789012" store-id="store1"></expeerly-component>
