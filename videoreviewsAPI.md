@@ -54,7 +54,7 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 ### Step 3: Call the expeerly API and pass your Store-ID for tracking
 
 #### API call
-Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=${GTIN/UPCnumber}`
+Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin={GTIN/UPCnumber}`
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
 
