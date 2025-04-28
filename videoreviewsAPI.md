@@ -24,17 +24,16 @@ The integration provides:
 
 ## Integration Steps Expeerly for your Image Gallery/Carousel 
 
-### Step 1: Get API acess
+### Step 1: Get Access Key
 
-~Log into your Expeerly dashboard and copy the API token.~ PENDING 
+To get Access key, please contact the expeerly team directly at product@expeerly.com. They will provide your store Access key.
 
-For the beta phase, get in touch with the expeerly team directly at product@expeerly.com. The API is publicly available for now.
-
+Pass the provided access key in the expeerly api.
 ### Step 2: Install Mux Player (Web, iOS, Android)
 Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
 
 ### Step 3: Call the expeerly API and pass your Store-ID
-Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=${GTIN/UPCnumber}`
+Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
 
