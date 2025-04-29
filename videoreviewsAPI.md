@@ -136,7 +136,7 @@ In order to make sure that you, we and the brands can track where the view traff
 <expeerly-component gtin="123456789012" access-key="h233i2q1l23w837w1k29we4mn8ui03gh" store-id="store1"></expeerly-component>
 ```
 
-That's it! The Expeerly script will automatically:
+That's it! The expeerly script will automatically:
 
 - Check for available video reviews
 - Add videos to your product carousel if available
