@@ -43,9 +43,9 @@ The integration provides:
 
 ## Integration Steps Expeerly for your Image Gallery/Carousel
 
-### Step 1: Get Access Key
+### Step 1: Get Your Access Key
 
-To get Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
+To get your Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
 
 Pass the provided Access Key in the expeerly API.
 
