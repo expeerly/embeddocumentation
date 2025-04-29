@@ -45,9 +45,9 @@ The integration provides:
 
 ### Step 1: Get Access Key
 
-To get Access key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access key.
+To get Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
 
-Pass the provided access key in the expeerly api.
+Pass the provided Access Key in the expeerly API.
 
 ### Step 2: Install Mux Player (Web, iOS, Android)
 
@@ -58,6 +58,10 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 #### API call
 
 Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
+
+```
+https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=h233i2q1l23w837w1k29we4mn8ui03gh&gtin=123456789012
+```
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
 
@@ -101,11 +105,11 @@ React Example
 
 ## Integration Steps Expeerly Badge/Review Block Widget
 
-### Step 1: Get Your Integration Script
+### Step 1: Get Your Access Key
 
-~Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.~ PENDING
+To get Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
 
-For the beta phase, get in touch with the expeerly team directly at <product@expeerly.com>. The script is publicly available for now.
+Pass the provided Access Key as attribue.
 
 ### Step 2: Add the Script to the Head Section
 
