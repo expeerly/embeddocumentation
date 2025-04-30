@@ -12,7 +12,7 @@ Version 1.7, 29th of April 2025
 - [Integration Steps Expeerly for your Image Gallery/Carousel](#integration-steps-expeerly-for-your-image-gallerycarousel)
   - [Step 1: Get API acess](#step-1-get-api-acess)
   - [Step 2: Install Mux Player (Web, iOS, Android)](#step-2-install-mux-player-web-ios-android)
-  - [Step 3: Call the expeerly API and pass your Store-ID](#step-3-call-the-expeerly-api-and-pass-your-store-id-for-tracking)
+  - [Step 3: Call the expeerly API and pass your Store-ID for Tracking](#step-3-call-the-expeerly-api-and-pass-your-store-id-for-tracking)
 - [Integration Steps Expeerly Badge/Review Block Widget](#integration-steps-expeerly-badgereview-block-widget)
   - [Step 1: Get Your Integration Script](#step-1-get-your-integration-script)
   - [Step 2: Add the Script to the Head Section](#step-2-add-the-script-to-the-head-section)
