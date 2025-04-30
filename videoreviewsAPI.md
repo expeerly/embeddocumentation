@@ -114,7 +114,7 @@ To get Access Key, please contact the expeerly team directly at <product@expeerl
 
 Pass the provided Access Key as attribue.
 
-### Step 2: Add the Script to the Head Section
+### Step 2: Add the expeerly Script to the Head Section
 
 Add the following code snippet to your head section in your html code
 
