@@ -53,7 +53,7 @@ Pass the provided Access Key in the expeerly API.
 
 Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
 
-**PLEASE NOTE:** The use of the Mux Player is mandatory if you want to integrate expeerly video reviews in your product image carousel.
+**PLEASE NOTE: The use of the Mux Player is mandatory if you want to integrate expeerly video reviews in your product image carousel.**
 
 ### Step 3: Call the expeerly API and pass your Store-ID for tracking
 
