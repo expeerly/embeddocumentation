@@ -1,8 +1,8 @@
-## 🔄 Migrating from Legacy to New API
+## Migrating from Legacy to New API
 
 To fetch product videos via the new API, simply update the base URL while keeping the parameters consistent.
 
-### ✅ Step-by-Step
+### Step-by-Step
 
 #### 1. Legacy API Format: 
 `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=YOUR_ACCESS_KEY&gtin=GTIN_CODE`
