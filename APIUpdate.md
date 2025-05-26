@@ -10,22 +10,8 @@ To fetch product videos via the new API, simply update the base URL while keepin
 #### 2. New API Format:
 `https://api.expeerly.com/api/videos?gtin=GTIN_CODE&access_key=YOUR_ACCESS_KEY`
 
-
-### Example Migration
-
-| Product           | GTIN           | Legacy API                                                                                      | New API                                                                                   |
-|-------------------|----------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| Puma Future 8     | 4067983093241  | `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=233i2q1l23w837w1k29we4mn8ui03gh&gtin=4067983093241` | `https://api.expeerly.com/api/videos?gtin=4067983093241&access_key=233i2q1l23w837w1k29we4mn8ui03gh` |
-| Sony Brava 7      | 4548736159815  | `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=233i2q1l23w837w1k29we4mn8ui03gh&gtin=4548736159815` | `https://api.expeerly.com/api/videos?gtin=4548736159815&access_key=233i2q1l23w837w1k29we4mn8ui03gh` |
-
-### Key Changes:
-- **Base URL updated** from `app.expeerly.com/api/1.1/wf/get-product-videos-processed`  
-- **Query params** (`gtin`, `access_key`) remain the same
-- **Field names** check the table below
-- Now uses the new production domain: `api.expeerly.com`
-
-
-
+#### 3. Field name changes
+Adapt the field names according to the table below if necessary
 | Field (API legacy)               | Field (API new)           |
 | -------------------------------- | ------------------------- |
 | `_id`                            | `id`                      |
@@ -41,3 +27,20 @@ To fetch product videos via the new API, simply update the base URL while keepin
 | `videoupload1_custom_videoupload`| `videoUpload`             |
 | `Created Date` / `Modified Date` | `createdAt` / `updatedAt` |
 | `product_custom_product2`        | `product`                 |
+
+
+### Example Migration
+
+| Product           | GTIN           | Legacy API                                                                                      | New API                                                                                   |
+|-------------------|----------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| Puma Future 8     | 4067983093241  | `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=233i2q1l23w837w1k29we4mn8ui03gh&gtin=4067983093241` | `https://api.expeerly.com/api/videos?gtin=4067983093241&access_key=233i2q1l23w837w1k29we4mn8ui03gh` |
+| Sony Brava 7      | 4548736159815  | `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=233i2q1l23w837w1k29we4mn8ui03gh&gtin=4548736159815` | `https://api.expeerly.com/api/videos?gtin=4548736159815&access_key=233i2q1l23w837w1k29we4mn8ui03gh` |
+
+### Key Changes:
+- **Base URL updated** from `app.expeerly.com/api/1.1/wf/get-product-videos-processed`  
+- **Query params** (`gtin`, `access_key`) remain the same
+- **Field names** check the table below
+Now uses the new production domain: `api.expeerly.com`
+
+
+
