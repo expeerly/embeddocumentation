@@ -59,11 +59,11 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 
 #### API call
 
-Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
+Call the expeerly API `https://api.expeerly.com/api/videos?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
 
 Example of API call:
 ```
-https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=h233i2q1l23w837w1k29we4mn8ui03gh&gtin=123456789012
+https://api.expeerly.com/api/videos?access_key=h233i2q1l23w837w1k29we4mn8ui03gh&gtin=123456789012
 ```
 
 The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
@@ -74,12 +74,12 @@ Example of returned data:
 [
     {
       ...
-      "mux_playback_id_text": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM",
+      "muxPlaybackId": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM",
     },
 ]
 ```
 
-Pass the `mux_playback_id_text` value to `playbackId`.
+Pass the `muxPlaybackId` value to `playbackId`.
 
 #### Store ID for Tracking
 
