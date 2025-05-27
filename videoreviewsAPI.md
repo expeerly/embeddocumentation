@@ -61,7 +61,7 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 
 ### Step 3: Prefetch and store available reviews
 
-Check which GTIN/EAN/UPC numbers have a review go to `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product.
+Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
 
 ### Step 4: Call the expeerly API and pass your Store-ID for tracking
 
@@ -139,7 +139,7 @@ Add the experly web component (with the gtin/ean/upc and access-key as an attrib
 ```
 
 ### Step 4: Prefetch and store available reviews
-Check which GTIN/EAN/UPC numbers have a review go to `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. 
+Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
 
 ### Step 5: Pass your Store-ID for Tracking
 
