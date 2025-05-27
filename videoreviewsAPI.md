@@ -1,16 +1,38 @@
 # Expeerly Video Review Integration Guide
 
-This guide explains how to integrate expeerly video reviews into your product pages. The integration enables both carousel-style video reviews and a detailed review block through a simple script integration. You can check this example integration [here](https://v0-expeerly-demo-shop-whqyon.vercel.app/).
+This guide explains how to integrate expeerly video reviews into your product pages. The integration enables both adding videos to your image gallery/carousel and a detailed review block through a simple script integration. You can check this example integration [here](https://v0-expeerly-demo-shop.vercel.app/).
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.5, 26th of March 2025
+Version 1.7, 29th of April 2025
+
+## Table of Contents
+
+- [Features](#features)
+- [Integration Steps Expeerly for your Image Gallery/Carousel](#integration-steps-expeerly-for-your-image-gallerycarousel)
+  - [Step 1: Get API acess](#step-1-get-api-acess)
+  - [Step 2: Install Mux Player (Web, iOS, Android)](#step-2-install-mux-player-web-ios-android)
+  - [Step 3: Call the expeerly API and pass your Store-ID for Tracking](#step-3-call-the-expeerly-api-and-pass-your-store-id-for-tracking)
+- [Integration Steps Expeerly Badge/Review Block Widget](#integration-steps-expeerly-badgereview-block-widget)
+  - [Step 1: Get Your Integration Script](#step-1-get-your-integration-script)
+  - [Step 2: Add the Script to the Head Section](#step-2-add-the-script-to-the-head-section)
+  - [Step 3: Add the expeerly component to Your Product Pages](#step-3-add-the-expeerly-component-to-your-product-pages)
+  - [Step 4: Pass your Store-ID for Tracking](#step-4-pass-your-store-id-for-tracking)
+  - [Customization](#customization)
+  - [Testing your Integration](#testing-your-integration)
+  - [What the expeerly.js does](#what-the-expeerlyjs-does)
+- [Optional: Check if reviews are available for given GTIN/EAN/UPC numbers](#optional-check-if-reviews-are-available-for-given-gtineanupc-numbers)
 
 ## Features
 
-The integration automatically provides:
+Our integration offers the possibiltiy to
 
-- Video reviews in your product image carousel
+- **add video reviews directly to your image gallery** or carousel using [mux](https://mux.com) as video streaming provider and
+- a **widget style implementation** for a badge and a review block that pulls data from the expeerly system and uses [mux](https://mux.com) for videos.
+
+The integration provides:
+
+- Video reviews in your product image gallery/carousel
 - Detailed review block including:
   - Star ratings
   - Reviewer names and profile pictures
@@ -19,15 +41,80 @@ The integration automatically provides:
 - Above-fold summary button linking to review block
 - Zero-impact when no videos are available
 
-## Integration Steps
+## Integration Steps Expeerly for your Image Gallery/Carousel
 
-### Step 1: Get Your Integration Script
+### Step 1: Get Your Access Key
 
-~Log into your Expeerly dashboard and copy your unique integration script. This script is pre-configured with your shop's identifier and necessary credentials.~ PENDING
+To get your Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
 
-For the beta phase, get in touch with the expeerly team directly at <product@expeerly.com>. The script is publicly available for now.
+Pass the provided Access Key in the expeerly API.
 
-### Step 2: Add the Script to the Head Section
+### Step 2: Install Mux Player (Web, iOS, Android)
+
+Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
+
+**PLEASE NOTE: The use of the Mux Player is mandatory if you want to integrate expeerly video reviews in your product image gallery/carousel.**
+
+### Step 3: Call the expeerly API and pass your Store-ID for tracking
+
+#### API call
+
+Call the expeerly API `https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
+
+Example of API call:
+```
+https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?access_key=h233i2q1l23w837w1k29we4mn8ui03gh&gtin=123456789012
+```
+
+The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
+
+Example of returned data:
+
+```js
+[
+    {
+      ...
+      "mux_playback_id_text": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM",
+    },
+]
+```
+
+Pass the `mux_playback_id_text` value to `playbackId`.
+
+#### Store ID for Tracking
+
+**Please note:** In order to make sure that you, we and the brands can track where the view traffic is coming from, passing a StoreId value is mandatory to track the views from your store. Please use the ID provided by the expeerly product team.
+
+To pass the StoreId of value `store1` on the mux tag check the examples below.
+
+HTML Example
+
+```html
+<mux-player
+  metadata-custom-1={store1}
+></mux-player>
+```
+
+React Example
+
+```html
+<MuxPlayer
+  metadata={{
+    'custom-1': 'store1',
+  }}
+></MuxPlayer>
+
+```
+
+## Integration Steps Expeerly Badge/Review Block Widget
+
+### Step 1: Get Your Access Key
+
+To get Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
+
+Pass the provided Access Key as attribue.
+
+### Step 2: Add the expeerly Script to the Head Section
 
 Add the following code snippet to your head section in your html code
 
@@ -37,21 +124,21 @@ Add the following code snippet to your head section in your html code
 
 ### Step 3: Add the expeerly component to Your Product Pages
 
-Add the experly web component (with the gtin/ean/upc as an attribute) where ever you want to have experely videos shown:
+Add the experly web component (with the gtin/ean/upc and access-key as an attribute) where ever you want to have experely videos shown:
 
 ```html
-<expeerly-component gtin="123456789012"></expeerly-component>
+<expeerly-component gtin="123456789012" access-key="h233i2q1l23w837w1k29we4mn8ui03gh"></expeerly-component>
 ```
 
-### Step 4: Pass your retailer tracking attribute
+### Step 4: Pass your Store-ID for Tracking
 
-In order to make sure that you, we and the brands can track where the view traffic is coming from, you need to pass the `store-id` attribute with your assigned value e.g:
+In order to make sure that you, we and the brands can track where the view traffic is coming from, passing a StoreId value is mandatory to track the views from your store. Please use the ID provided by the expeerly product team. e.g:
 
 ```html
-<expeerly-component gtin="123456789012" store-id="store1"></expeerly-component>
+<expeerly-component gtin="123456789012" access-key="h233i2q1l23w837w1k29we4mn8ui03gh" store-id="store1"></expeerly-component>
 ```
 
-That's it! The Expeerly script will automatically:
+That's it! The expeerly script will automatically:
 
 - Check for available video reviews
 - Add videos to your product carousel if available
@@ -59,11 +146,7 @@ That's it! The Expeerly script will automatically:
 - Add a summary button above the fold
 - Handle all analytics tracking
 
-### Optional: Check if reviews are available without script
-
-If you would like to check which GTIN/EAN/UPC numbers have a review go to `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of product for which video reviews are available. The list is updated in real time and have a timestamp when you access it. This can be useful if you would like to avoid loading the expeerly integration on every page.
-
-## Customization
+### Customization
 
 To globaly customize the appearance of the Expeerly integration, you can overwrite the config stored in the window object:
 
@@ -84,88 +167,34 @@ Available configurations:
 To customize individual integrations you can add attributes to the expeerly html element:
 
 ```html
-<expeerly-component type="badge" theme="dark" max-video="12"></expeerly-component>
+<expeerly-component type="badge" theme="dark" max-videos="12"></expeerly-component>
 ```
 
 Available data attributes:
 
 | Name | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| type | badge / carousel / reviewblock | select to show the data in the carousel, the button and/or as review block | reviewblock |
+| type | badge / reviewblock | select to show the data in the button or as review block | reviewblock |
 | theme | dark / light / miniminal | select the theme (background colour) | dark |
+| access-key | string | access key given to you by expeerly team | undefined |
 | max-videos | number | how many reviews should be loaded | undefined |
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
 | store-id | string | What id would you want to track analytics on the video views? | undefined |
 
-## Testing your integration
+### Testing your Integration
 
 To test your integration you can call the following GTIN numbers: `4548736157088` Sony Ult Field 1, `7610045010440` Koenig Micro Wave, `8720689021937` Philips Baby Care Set or `4008789094636` Playmobil Fire Brigade Truck over the API.
 
-## What the expeerly.js does
+### What the expeerly.js does
 
 The script
 
-- creates a video player from [mux](https://www.mux.com/) and streams the videos from the mux server.
-- makes a request on the backend to get all important data for the reviews.
-- registers a web component called expeerly-component
+- creates a video player from [mux](https://www.mux.com/) and streams the videos from the mux server,
+- makes a request on the backend to get all important data for the reviews,
+- registers a web component called expeerly-component.
 
 All styles are generated by the script and each class contains the prefix `expeerly`.
 
-For testing visit [Here](https://expeerly.com/demo.html) and inspect the dev tools to see how the expeerly components were rendered.
+## Optional: Check if reviews are available for given GTIN/EAN/UPC numbers
 
-## Implement Expeerly Videos in Your Carousel
-
-### Step 1
-
-Add the following code snippet to your head section in your html code.
-
-```html
-<script type="module" src="https://www.expeerly.com/expeerly.js"></script>
-```
-
-or Layout componenet of your framework add this
-
-```html
-<Script type="module" src="https://www.expeerly.com/expeerly.js" />
-```
-
-### Step 2
-
-Fetch the videos using the Gtin number for the Videos you want to fetch
-
-```js
-https://app.expeerly.com/api/1.1/wf/get-product-videos-processed/?gtin=GTINVALUE
-```
-
-Replace GTINVALUE with a gtin number, you can use [these](#testing-your-integration)
- numbers to test.
-
-### Step 3
-
-From the data returned by the api the important data needed for the carousel implementation is the `mux_playback_id_text`
-
-The core of the video playback in each slide is implemented using the Mux Player. Here's the key snippet that renders a video slide:
-
-```html
-<mux-player
-  playback-id={mux_playback_id_text}
-  stream-type="on-demand"
-  controls
-  muted
-  metadata-custom-1={storeId}
-  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-  ></mux-player>
-```
-
-### Explanation
-
-Mux Player Attributes:
-
-- mux_playback_id_text: Dynamically set based on the fetched video data.
-- stream-type="on-demand": Specifies the type of stream.
-- controls: Enables player controls.
-- muted: Starts the video muted.
-- metadata-custom-1: Passes the store ID to the player.
-- style: Ensures the player fills its container with proper object fit.
-
-Note: Passing a StoreID value is important to help track the Views from your store.
+If you would like to check which GTIN/EAN/UPC numbers have a review go to `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of product for which video reviews are available. The list is updated in real time and have a timestamp when you access it. This can be useful if you would like to avoid loading the expeerly integration on every page.

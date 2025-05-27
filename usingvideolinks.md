@@ -1,5 +1,5 @@
-# Embedding Expeerly Videos on Online Shops or Marketplaces: Developer Guide
-This guide provides an overview of how to embed [expeerly videos](https://expeerly.com) into your online shop or marketplace. It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. The main placement for this way of embedding is the product detail page but any placement is possible. Embedding via any of the solutions is free of charge for you as retail partner. For brands who are expeerly customers, video views might incur charges.
+# Integration of Expeerly Videos on Online Shops or Marketplaces without API
+This guide provides an overview of how to embed [expeerly videos](https://expeerly.com) into your online shop or marketplace if you don't use the [full API and  or widget integration](https://github.com/expeerly/embeddocumentation/blob/main/videoreviewsAPI.md). It includes examples and step-by-step instructions to assist both product owners and developers in the integration process. The main placement for this way of embedding is the product detail page but any placement is possible. Embedding via any of the solutions is free of charge for you as retail partner. For brands who are expeerly customers, video views might incur charges.
 
 **Pro tip: Open all links in new browser tabs to keep this page open.**
 
@@ -146,12 +146,12 @@ Feel free to improve this implementation further.
 
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
-As of now all our retail partners get a spreadsheet where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to ~20-30 videos a month.
+If you're using the non-API integration, you get a spreadsheet on every second Tuesday of each month where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to ~10 videos a month.
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
-### 4.2 Retail partner portal (pending)
-We have a retail partner portal in the pipeline that will allow you to login to our [platform](https://app.expeerly.com) and see all the available videos there. 
+### 4.2 Matching videos as a brand
+You can go to "All assets" in your expeerly account and either copy & paste each mux streaming link or download the full video.
 
 ### 4.3 Public API
 Please check [our video review API for this](https://github.com/expeerly/embeddocumentation/blob/main/videoreviewsAPI.md)
