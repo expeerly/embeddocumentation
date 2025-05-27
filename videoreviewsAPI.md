@@ -43,6 +43,7 @@ The integration provides:
   - Expeerly branding
 - Above-fold summary button linking to review block
 - Zero-impact when no videos are available
+- For the gallery/carousel or badge/review block integration, **all steps are mandatory to implement**
 
 ## Integration Steps Expeerly for your Image Gallery/Carousel
 
