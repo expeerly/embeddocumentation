@@ -190,7 +190,7 @@ Available data attributes:
 | access-key | string | access key given to you by expeerly team | undefined |
 | max-videos | number | how many reviews should be loaded | undefined |
 | locale | en / de / fr / it | for now we provide 4 languages, if there is no language we will use the html or browser defined language. If we don't provide the language we will use the default language  (if not set, it will use the global config settings) | en |
-| store-id | string | What id would you want to track analytics on the video views? | undefined |
+| store-id | string | this will attribute the traffic you generate to your online store | undefined |
 
 ### Testing your Integration
 
