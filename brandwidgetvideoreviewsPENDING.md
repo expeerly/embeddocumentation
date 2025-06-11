@@ -21,7 +21,6 @@ This guide explains how to integrate the **expeerly Brand Widget**, a lightweigh
 - [What the Widget Displays](#what-the-widget-displays)
 - [Support](#support)
 
----
 
 ## Overview
 
@@ -33,7 +32,6 @@ The widget automatically:
 - Aggregates ratings and reviews
 - Shows all brand video reviews in an interactive fly-in player
 
----
 
 ## Key Features
 
@@ -44,7 +42,6 @@ The widget automatically:
 - Supports `light` and `dark` themes
 - Fully async and non-blocking
 
----
 
 ## How It Works
 
@@ -53,7 +50,6 @@ The widget automatically:
 3. Optionally, you can control placement with an HTML tag.
 4. It pulls and displays brand-wide review data and videos using the brand ID like on your expeerly.com brand page.
 
----
 
 ## Integration Steps
 
@@ -64,7 +60,6 @@ Request both from the Expeerly team at `product@expeerly.com`:
 - Your **Access Key**
 - Your **Brand ID**
 
----
 
 ### Step 2: Add the Script to Your Head Section
 
@@ -83,7 +78,6 @@ Insert the following snippet into the `<head>` of your website:
 
 This is all you need to get the widget live on all pages.
 
----
 
 ### Step 3 (Optional): Control Placement with Widget Tag
 
@@ -95,7 +89,6 @@ If you want to control where exactly the widget appears (e.g., inside a specific
 
 If present, this overrides the default automatic placement.
 
----
 
 ## Customization Options
 
@@ -122,8 +115,6 @@ Example:
   };
 </script>
 ```
-
----
 
 ## What the Widget Displays
 
