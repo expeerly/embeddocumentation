@@ -1,4 +1,3 @@
-
 # Brand Widget for Video Reviews – Integration Guide
 
 This guide explains how to integrate the **Expeerly Brand Widget**, a lightweight JavaScript widget that automatically displays video reviews, aggregated ratings, and review counts across all products for a specific brand. It's built for easy, async integration into any website or online shop—just like a live chat widget.
@@ -80,3 +79,74 @@ Insert the following snippet into the `<head>` of your website:
     theme: "light" // or "dark"
   };
 </script>
+```
+
+This is all you need to get the widget live on all pages.
+
+---
+
+### Step 3 (Optional): Control Placement with Widget Tag
+
+If you want to control where exactly the widget appears (e.g., inside a specific container), add the following tag to your HTML:
+
+```html
+<expeerly-brand-widget></expeerly-brand-widget>
+```
+
+If present, this overrides the default automatic placement.
+
+---
+
+## Customization Options
+
+You can configure the widget using the `window.expeerlyBrand` object. Below are the available options:
+
+| Option       | Type   | Description                          | Values                | Default |
+|--------------|--------|--------------------------------------|------------------------|---------|
+| `brandId`    | string | Required. Provided by Expeerly       | e.g. "brand123"        | —       |
+| `accessKey`  | string | Required. Provided by Expeerly       | e.g. "abc123xyz"       | —       |
+| `theme`      | string | Choose widget theme                  | `light`, `dark`        | `light` |
+| `locale`     | string | Interface language                   | `en`, `de`, `fr`, `it` | auto    |
+| `maxVideos`  | number | Max number of videos to display      | Any integer            | 12      |
+
+Example:
+
+```html
+<script>
+  window.expeerlyBrand = {
+    brandId: "yourBrand123",
+    accessKey: "abc123xyz",
+    theme: "dark",
+    locale: "de",
+    maxVideos: 10
+  };
+</script>
+```
+
+---
+
+## What the Widget Displays
+
+Once loaded, the widget displays:
+
+- Average Star Rating across all brand products  
+- Total Number of Reviews  
+- All Video Reviews for the Brand in a fly-in slider  
+- Automatically styled in light or dark theme  
+
+---
+
+## Technical Notes
+
+- API endpoint:  
+  `https://api.expeerly.com/api/videos?access_key=...&brand_id=...`
+- All videos are streamed via [Mux](https://mux.com)
+- The widget loads asynchronously and is rendered after page load
+- Store-ID is not required
+
+---
+
+## Support
+
+For setup help, access credentials, or customization support, contact:  
+**product@expeerly.com**
