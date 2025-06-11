@@ -41,8 +41,6 @@ The widget automatically:
 - Supports `light` and `dark` themes
 - Fully async and non-blocking
 
-
-
 ## How It Works
 
 1. You include a script in your website’s `<head>`.
