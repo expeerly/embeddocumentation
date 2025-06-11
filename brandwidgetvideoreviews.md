@@ -11,8 +11,6 @@ This guide explains how to integrate the **expeerly Brand Widget**, a lightweigh
 ## Table of Contents
 
 - [Overview](#overview)
-- [Key Features](#key-features)
-- [How It Works](#how-it-works)
 - [Integration Steps](#integration-steps)
   - [Step 1: Get Your Access Key and Brand ID](#step-1-get-your-access-key-and-brand-id)
   - [Step 2: Add the Script to Your Head Section](#step-2-add-the-script-to-your-head-section)
