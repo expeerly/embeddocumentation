@@ -24,7 +24,7 @@ This guide explains how to integrate the **expeerly Brand Widget**, a lightweigh
 
 ## Overview
 
-The **expeerly Brand Widget** lets you embed a brand-level review summary on your site with a single script. By default, it appears on all pages, just like live chat or helpdesk widgets.
+The **expeerly Brand Widget** lets you embed a brand-level review summary on your site with a single script. By default, it appears on all pages, just like live chat or helpdesk widgets. You can check a mockup of the widget design [here](https://drive.google.com/file/d/15zYmtFKxZgEnG4_TPtjwY8WKsGwzj8jz/view?usp=sharing).
 
 The widget automatically:
 
