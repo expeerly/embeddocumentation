@@ -1,9 +1,9 @@
-# Brand Widget for Video Reviews – Integration Guide
+# Brand Widget for Video Reviews – Integration Guide - PENDING
 
-This guide explains how to integrate the **Expeerly Brand Widget**, a lightweight JavaScript widget that automatically displays video reviews, aggregated ratings, and review counts across all products for a specific brand. It's built for easy, async integration into any website or online shop—just like a live chat widget.
+This guide explains how to integrate the **expeerly Brand Widget**, a lightweight JavaScript widget that automatically displays video reviews, aggregated ratings, and review counts across all products for a specific brand. It's built for easy, async integration into any website or online shop—just like a live chat widget.
 
-**Version:** 1.1  
-**Date:** June 2025
+**Version:** 0.1
+**Publication pending**
 
 ---
 
@@ -25,7 +25,7 @@ This guide explains how to integrate the **Expeerly Brand Widget**, a lightweigh
 
 ## Overview
 
-The **Expeerly Brand Widget** lets you embed a brand-level review summary on your site with a single script. By default, it appears on all pages, just like live chat or helpdesk widgets.
+The **expeerly Brand Widget** lets you embed a brand-level review summary on your site with a single script. By default, it appears on all pages, just like live chat or helpdesk widgets.
 
 The widget automatically:
 
@@ -51,7 +51,7 @@ The widget automatically:
 1. You include a script in your website’s `<head>`.
 2. The widget loads asynchronously and appears automatically at the edge of every page.
 3. Optionally, you can control placement with an HTML tag.
-4. It pulls and displays brand-wide review data and videos using the brand ID.
+4. It pulls and displays brand-wide review data and videos using the brand ID like on your expeerly.com brand page.
 
 ---
 
@@ -71,7 +71,7 @@ Request both from the Expeerly team at `product@expeerly.com`:
 Insert the following snippet into the `<head>` of your website:
 
 ```html
-<script type="module" async src="https://www.expeerly.com/brand-widget.js"></script>
+<script type="module" async src="https://www.expeerly.com/expeerly-brand-widget.js"></script>
 <script>
   window.expeerlyBrand = {
     brandId: "yourBrand123",
@@ -107,7 +107,7 @@ You can configure the widget using the `window.expeerlyBrand` object. Below are 
 | `accessKey`  | string | Required. Provided by Expeerly       | e.g. "abc123xyz"       | —       |
 | `theme`      | string | Choose widget theme                  | `light`, `dark`        | `light` |
 | `locale`     | string | Interface language                   | `en`, `de`, `fr`, `it` | auto    |
-| `maxVideos`  | number | Max number of videos to display      | Any integer            | 12      |
+| `maxVideos`  | number | Max number of videos to display      | Any integer            | 6      |
 
 Example:
 
@@ -129,20 +129,11 @@ Example:
 
 Once loaded, the widget displays:
 
-- Average Star Rating across all brand products  
+- Average Star Rating across for your brand based on all expeerly reviews
 - Total Number of Reviews  
 - All Video Reviews for the Brand in a fly-in slider  
 - Automatically styled in light or dark theme  
 
----
-
-## Technical Notes
-
-- API endpoint:  
-  `https://api.expeerly.com/api/videos?access_key=...&brand_id=...`
-- All videos are streamed via [Mux](https://mux.com)
-- The widget loads asynchronously and is rendered after page load
-- Store-ID is not required
 
 ---
 
