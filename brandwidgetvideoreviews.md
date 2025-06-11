@@ -41,14 +41,6 @@ The widget automatically:
 - Supports `light` and `dark` themes
 - Fully async and non-blocking
 
-## How It Works
-
-1. You include a script in your website’s `<head>`.
-2. The widget loads asynchronously and appears automatically at the edge of every page.
-3. Optionally, you can control placement with an HTML tag.
-4. It pulls and displays brand-wide review data and videos using the brand ID like on your expeerly.com brand page.
-
-
 ## Integration Steps
 
 ### Step 1: Get Your Access Key and Brand ID
