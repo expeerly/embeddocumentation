@@ -23,27 +23,24 @@ This guide explains how to integrate the **expeerly Brand Widget**, a lightweigh
 
 
 ## Overview
-
 The **expeerly Brand Widget** lets you embed a brand-level review summary on your site with a single script. By default, it appears on all pages, just like live chat or helpdesk widgets. 
 
-#### Mockup
-You can check a mockup of the widget design [here](https://drive.google.com/file/d/15zYmtFKxZgEnG4_TPtjwY8WKsGwzj8jz/view?usp=sharing).
-
-#### Key features
 The widget automatically:
 - Queries Expeerly’s API for all product GTINs under a brand
 - Aggregates ratings and reviews
 - Shows all brand video reviews in an interactive fly-in player
 
+### Mockup
+- You can check a mockup of the widget design [here](https://drive.google.com/file/d/15zYmtFKxZgEnG4_TPtjwY8WKsGwzj8jz/view?usp=sharing).
 
-## Key Features
-
+### Key Features
 - One-line integration
 - Brand-level average rating and review count
 - Video review fly-in player
 - Appears automatically on every page
 - Supports `light` and `dark` themes
 - Fully async and non-blocking
+
 
 
 ## How It Works
