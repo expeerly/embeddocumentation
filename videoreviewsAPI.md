@@ -13,8 +13,6 @@ Version 1.8.1, 24th of June 2025
   - [Step 2: Install Mux Player (Web, iOS, Android)](#step-2-install-mux-player-web-ios-android)
   - [Step 3: Prefetch and store available reviews](#step-3-prefetch-and-store-available-reviews)
   - [Step 4: Call the expeerly API and pass your Store-ID for tracking](#step-4-call-the-expeerly-api-and-pass-your-store-id-for-tracking)
-    - [API call](#api-call)
-    - [Store ID for Tracking](#store-id-for-tracking)
 - [Integration Steps Expeerly Badge/Review Block Widget](#integration-steps-expeerly-badgereview-block-widget)
   - [Step 1: Get Your Access Key](#step-1-get-your-access-key-1)
   - [Step 2: Add the expeerly Script to the Head Section](#step-2-add-the-expeerly-script-to-the-head-section)
@@ -65,7 +63,7 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
 
 #### Normalize GTIN/EAN/UPC
-Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g 'gtin = gtin.replace(/^0+/, "")'.
+Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g `gtin = gtin.replace(/^0+/, "")`.
 
 ### Step 4: Call the expeerly API and pass your Store-ID for tracking
 
@@ -147,7 +145,7 @@ Add the experly web component (with the gtin/ean/upc and access-key as an attrib
 Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
 
 #### Normalize GTIN/EAN/UPC
-Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g 'gtin = gtin.replace(/^0+/, "")'.
+Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g `gtin = gtin.replace(/^0+/, "")`.
 
 ### Step 5: Pass your Store-ID for Tracking
 
