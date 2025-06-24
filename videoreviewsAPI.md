@@ -4,7 +4,7 @@ This guide explains how to integrate expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.8, 27th of May 2025
+Version 1.8.1, 24th of June 2025
 
 ## Table of Contents
 - [Features](#features)
@@ -61,7 +61,11 @@ Get the mux player that best fits your needs [here](https://www.mux.com/docs/gui
 
 ### Step 3: Prefetch and store available reviews
 
+#### Fetch & store CSV with GTIN/EAN/UPC numbers
 Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
+
+#### Normalize GTIN/EAN/UPC
+Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g 'gtin = gtin.replace(/^0+/, "")'.
 
 ### Step 4: Call the expeerly API and pass your Store-ID for tracking
 
@@ -139,7 +143,11 @@ Add the experly web component (with the gtin/ean/upc and access-key as an attrib
 ```
 
 ### Step 4: Prefetch and store available reviews
+#### Fetch & store CSV with GTIN/EAN/UPC numbers
 Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
+
+#### Normalize GTIN/EAN/UPC
+Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g 'gtin = gtin.replace(/^0+/, "")'.
 
 ### Step 5: Pass your Store-ID for Tracking
 
