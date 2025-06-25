@@ -5,6 +5,28 @@ This guide provides an overview of how to embed [expeerly videos](https://expeer
 
 Version 1.3, 11th of February 2025
 
+## Table of Contents
+
+1. [Options: Youtube or Mux](#1-options-youtube-or-mux)
+2. [Embedding with Youtube](#2-embedding-with-youtube)
+   - [2.1 Embedding a YouTube Video](#21-embedding-a-youtube-video)
+   - [2.2 Embed examples Youtube](#22-embed-examples-youtube)
+3. [Embedding with Mux](#3-embedding-with-mux)
+   - [3.1 Embedding with Mux Streaming Links](#31-embedding-with-mux-streaming-links)
+   - [3.2 Embed examples Mux Streaming Links](#32-embed-examples-mux-streaming-links)
+   - [3.3 Embedding with Mux Developer SDK](#33-embedding-with-mux-developer-sdk)
+   - [3.4 Embed example Mux SDK](#34-embed-example-mux-sdk)
+   - [3.5 Embedding Mux Videos in Shopify](#35-embedding-mux-videos-in-shopify)
+     - [Step 1: Add a Metafield for Mux Video Links](#step-1-add-a-metafield-for-mux-video-links)
+     - [Step 2: Modify Your Shopify Product Page Template](#step-2-modify-your-shopify-product-page-template)
+     - [Step 3: Add Individual Streaming Links to Each Product](#step-3-add-individual-streaming-links-to-each-product)
+     - [Step 4: Suggested Styling for Centered 9:16 Video](#step-4-suggested-styling-for-centered-916-video)
+4. [Matching Video Links with Products in your Catalogue](#4-matching-video-links-with-products-in-your-catalogue)
+   - [4.1 Current matching via spreadsheet](#41-currrent-matching-via-spreadsheet)
+   - [4.2 Matching videos as a brand](#42-matching-videos-as-a-brand)
+   - [4.3 Public API](#43-public-api)
+   - [4.4 Formats](#44-formats)
+
 ## 1. Options: Youtube or Mux
 Expeerly offers 2 Video Embedding Solutions via [Youtube](https://www.youtube.com/) Embed Links or via [Mux](https://www.mux.com/).
 
