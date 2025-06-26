@@ -30,7 +30,6 @@ Define/update the following data types in Bubble:
 
 
 ### 2. Video Playback Integration (Mux)
-
 Use Mux’s streaming video via an HTML element in Bubble:
 
 ```html
@@ -46,7 +45,6 @@ Implement JavaScript control with the **Toolbox plugin** or Bubble’s native `R
 
 
 ###  3. Subtitle Editor UI (VEED.io-style)
-
 Create a **Repeating Group (RG)** for `SubtitleSegment` items of the selected video:
 
 | Start | End | Text | Actions |
@@ -63,9 +61,7 @@ Features:
 
 
 ###  4. Time Sync Engine
-
 #### Real-time preview with overlay (VEED-style)
-
 - Add an `Overlay Text Box` on the video container
 - Use `Do every 0.25s` event to:
   - Get `currentTime` from video player via JS
@@ -76,7 +72,6 @@ Features:
 
 
 ###  5. Translation with GTP (Already Integrated)
-
 Use your existing GTP integration to:
 - Translate each `text` field to `translated_text` after proofreading
 - Store translations directly on `SubtitleSegment`
@@ -90,7 +85,6 @@ Use your existing GTP integration to:
 ###  6. Burned Version Export
 
 Use backend workflows to:
-
 #### A. Generate SRT file:
 - Loop through `SubtitleSegment` list
 - Format as `.srt` with start/end in HH:MM:SS,MS format
@@ -100,12 +94,11 @@ Use backend workflows to:
 - Use FFmpeg or Mux-compatible solution
 - Input: original video stream + SRT file
 - Output: MP4 with hardcoded subtitles
-- Save result to Bubble `Video` object
-
+- Save burned-in result as new asset to mux
+  
 #### C. Button: "Export for Social"
 - Triggers backend workflow
 - Downloads final video
-- Optional: add watermark or logo
 
 ### 7. Replace existing SRT file on mux
 - Delete original SRT file
