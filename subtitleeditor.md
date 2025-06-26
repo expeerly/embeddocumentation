@@ -29,7 +29,7 @@ Define/update the following data types in Bubble:
 
 
 
-### 2. Video Playback Integration (Mux)
+### 2. Video Playback Integration (Mux) upgrading our existing custom mux plugin
 Use Mux’s streaming video via an HTML element in Bubble:
 
 ```html
