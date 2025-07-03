@@ -73,7 +73,7 @@ Features:
 
 
 ###  5. Translation with GTP (Already Integrated)
-Use your existing GTP integration to:
+Use our existing GTP integration to:
 - Translate each `text` field to `translated_text` after proofreading
 - Store translations directly on `SubtitleSegment`
 - Offer a toggle in the editor to show **Original vs Translated**
