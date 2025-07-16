@@ -1,4 +1,4 @@
-# Analytics Feature Calculation
+# Analytics Feature
 
 ## Highlevel architecture
 
