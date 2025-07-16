@@ -48,16 +48,29 @@ Supabase
   - Demographic
   - External / Search / Social
     - **External**: Brack, Digitec, Galaxus (counted as "Retail" in design of "Placement/Traffic source"  (see [here](https://jmp.sh/jeZpkbXb)) and as "Traffic source/subchannel" in the schema)
-    - **Search**: Explicitly marked as search in YouTube
+    - **Search**: Explicitly marked as search in YouTube (counted as "Search" of "Placement/Traffic source", see [here](https://jmp.sh/h7eWaXYH))
     - **Social**: Any source not classified as External or Search
 
-### Mux (Expeerly.com + Direct Retail API Integrations)
+### Mux-Specific (Expeerly.com + Direct Retail API Integrations)
 - Traffic Source Details:
   - Geographic
-  - Demographic
   - External / Search
     - **External**: Identified via shop ID in Mux Analytics ([example screenshot](https://jmp.sh/GPxTVYH9))
       - These views are a subset of total views for the playback ID
+     
+### TikTok-Specific
+- Traffic Source Details:
+  - Geographic
+  - Search / Social
+    - **Search**: Views that are specifically labelled as search
+    - Social, all other views
+   
+### Instagram/Facebook-Specific
+- Traffic Source Details:
+  - Geographic
+  - Search / Social
+    - **Search**: Views that are specifically labelled as search
+    - Social, all other views
 
 ---
 
@@ -68,14 +81,15 @@ Supabase
 - **Placement / Traffic Source Classification** ([design reference](https://jmp.sh/PZXfK9G0)):
 
   ### Retail
-  - YouTube: Traffic source = External, specifically Brack, Digitec, Galaxus
+  - YouTube: Traffic source = External: Brack, Digitec, Galaxus
   - Mux: Interdiscount and Ochsner Sport (via shop ID)
-  - Thalia and Shop Apotheke (tracked manually)
+  - Thalia and Shop Apotheke (uploaded manually)
 
   ### Search
   - YouTube: Traffic source = Search
   - Mux: All expeerly.com traffic, excluding Retail
   - TikTok: If search traffic is available and labeled
+  - Instagram/Facebook: If search traffic is available and labeled
 
   ### Social
   - Any other traffic from YouTube, Meta (Instagram, Facebook), and TikTok that doesn't fit the Retail or Search definitions
