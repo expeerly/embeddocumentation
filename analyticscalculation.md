@@ -1,11 +1,27 @@
 # Analytics Feature Calculation
 
+## Highlevel architecture
+
+### Data storge
+- Supabase
+
+### Data integrator
+- For Youtube, Tiktok, Instagram and Tiktok, To be defined (PMA/Supermetrics)
+- For Mux (expeerly.com/retailer API); [mux data api](https://www.mux.com/docs/api-reference/data/metrics/list-breakdown-values)
+- For Thalia/Shop Apotheke (manual CSV upload)
+
+### Frontend
+- Standalone on analytics.expeerly.com
+- Next.js
+- JWT token from app.expeerly.com
+
+### Client user & product, brand, reviewer data
+- On app.expeerly.com with bubble
+- Needs 2 way API from bubble to supabase
+
 ---
 
 ## What Kind of Data Do We Store?
-
-### Storage solution
-Supabase
 
 ### Channels
 
@@ -100,7 +116,52 @@ Supabase
 
 ---
 
-## Filtering on analytics.expeerly.com
+## Page setup
+
+### Analytics overview
+- Total views chart
+- Total video views
+- View through rate
+- Average view length
+- Total watch time
+- Placement/traffic source (views)
+- Number of products reviewed
+- Total number of reviews
+- Search traffic vs. overall traffic
+- Average rating
+- Placement/traffic source (views), detail view
+- Search trafic (detail view)
+- All publishing channels
+
+### Product view (only for the relevant product)
+- Average rating
+- Total views chart
+- Total video views
+- View through rate
+- Average view length
+- Total watch time
+- Placement/traffic source (views)
+- Placement/traffic source (views), detail view
+- Search trafic (detail view)
+- All publishing channels
+- Show/hide detail function
+
+- ### Brand view (only for the relevant brand)
+- Average rating
+- Total views chart
+- Total video views
+- View through rate
+- Average view length
+- Total watch time
+- Placement/traffic source (views)
+- Placement/traffic source (views), detail view
+- Search trafic (detail view)
+- All publishing channels
+- Show/hide detail function
+
+---
+
+## Filtering
 
 ### Date range/Granualrity
 - Show and select the date range (allow to comprae the same ranage back)
@@ -108,8 +169,8 @@ Supabase
 
 ### Filters
 - Placement/traffic source (Retail, Search, Social, as pere [here](#Retail))
-- Publishing channels (All and selectable as per [here](#Channels) and design [here]([url](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8286-63930&t=GqC5bw1yqZ5WbYUU-1)))
-- Brand (from bubble)
-- Product (from bubble) 
-- Reviewer (from bubble)
+- Publishing channels (All and selectable as per [here](#Channels) and design [here](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8286-63930&t=GqC5bw1yqZ5WbYUU-1))
+- Brand (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4))
+- Product (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4)) 
+- Reviewer (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4))
 
