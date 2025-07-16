@@ -1,4 +1,7 @@
-## What Kind of Data Do We Want to Store?
+## What Kind of Data Do We Store?
+
+### Storage solution
+Supabase
 
 ### Channels
 
@@ -6,24 +9,24 @@
 - Ochsner Sport (tracked via shop ID)
 - Interdiscount (tracked via shop ID)
 
-#### YouTube
+#### YouTube (via Integrator)
 - Galaxus (tracked as external via YouTube Analytics)
 - Digitec
 - Brack
 
-#### TikTok
+#### TikTok (via Integrator)
 - @expeerly
 - @expeerly_deutsch
 
-#### Instagram
+#### Instagram (via Integrator)
 - @expeerly
 - @expeerly_deutsch
 
-#### Facebook
+#### Facebook (via Integrator)
 - @expeerly
 - @expeerly_deutsch
 
-#### Others
+#### Others (via CSV upload to Supabase)
 - Thalia (manual tracking)
 - Shop Apotheke (manual tracking)
 
@@ -44,7 +47,7 @@
   - Geographic
   - Demographic
   - External / Search / Social
-    - **External**: Brack, Digitec, Galaxus (counted as "Retail" in design and as "Traffic source/subchannel" in the schema)
+    - **External**: Brack, Digitec, Galaxus (counted as "Retail" in design of "Placement/Traffic source"  (see [here](https://jmp.sh/jeZpkbXb)) and as "Traffic source/subchannel" in the schema)
     - **Search**: Explicitly marked as search in YouTube
     - **Social**: Any source not classified as External or Search
 
