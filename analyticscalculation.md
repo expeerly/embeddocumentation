@@ -147,7 +147,7 @@
 - All publishing channels
 - Show/hide detail function
 
-- ### Brand view (only for the relevant brand)
+### Brand view (only for the relevant brand)
 - Average rating
 - Total views chart
 - Total video views
