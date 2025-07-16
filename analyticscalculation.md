@@ -162,7 +162,7 @@
 
 ---
 
-## Filtering
+## Filtering/Sorting
 
 ### Date range/Granualrity
 - Show and select the date range (allow to comprae the same ranage back)
@@ -174,4 +174,7 @@
 - Brand (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4))
 - Product (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4)) 
 - Reviewer (from bubble, see [schema](https://dbdiagram.io/d/SchemaSimplified-684186bbba2a4ac57bfb9fa4))
+
+### Sorting
+- Products can be sorted A-Z or Z-A
 
