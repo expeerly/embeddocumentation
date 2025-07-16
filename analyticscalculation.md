@@ -97,3 +97,19 @@ Supabase
 
   ### Social
   - Any other traffic from YouTube, Meta (Instagram, Facebook), and TikTok that doesn't fit the Retail or Search definitions
+
+---
+
+## Filtering on analytics.expeerly.com
+
+### Date range/Granualrity
+- Show and select the date range (allow to comprae the same ranage back)
+- Select Daily, Weekly, Monthly granularity
+
+### Filters
+- Placement/traffic source (Retail, Search, Social, as pere [here](### Retail))
+- Publishing channels (All and selectable as per [here](### Channels) and design [here]([url](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8286-63930&t=GqC5bw1yqZ5WbYUU-1)))
+- Brand (from bubble)
+- Product (from bubble) 
+- Reviewer (from bubble)
+
