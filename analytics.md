@@ -101,19 +101,19 @@
 - **Average Watch Time**: Mean duration viewed across all plays
 - **Placement / Traffic Source Classification** ([design reference](https://jmp.sh/PZXfK9G0)):
 
-  ### Retail
-  - YouTube: Traffic source = External: Brack, Digitec, Galaxus
-  - Mux: Interdiscount and Ochsner Sport (via shop ID)
-  - Thalia and Shop Apotheke (uploaded manually)
+### Retail
+- YouTube: Traffic source = External: Brack, Digitec, Galaxus
+- Mux: Interdiscount and Ochsner Sport (via shop ID)
+- Thalia and Shop Apotheke (uploaded manually)
 
-  ### Search
-  - YouTube: Traffic source = Search
-  - Mux: All expeerly.com traffic, excluding Retail
-  - TikTok: If search traffic is available and labeled
-  - Instagram/Facebook: If search traffic is available and labeled
+### Search
+- YouTube: Traffic source = Search
+- Mux: All expeerly.com traffic, excluding Retail
+- TikTok: If search traffic is available and labeled
+- Instagram/Facebook: If search traffic is available and labeled
 
-  ### Social
-  - Any other traffic from YouTube, Meta (Instagram, Facebook), and TikTok that doesn't fit the Retail or Search definitions
+### Social
+- Any other traffic from YouTube, Meta (Instagram, Facebook), and TikTok that doesn't fit the Retail or Search definitions
 
 ---
 
