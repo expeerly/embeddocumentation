@@ -1,41 +1,78 @@
-#### What kind of data we want to store?
-- Channels:
-  - Expeerly (Mux)
-    - Ochsner Sport (as per shop id)
-    - Interdiscount (as per shop id)  
-  - Youtube
-    - Galaxus (external source as per YT analytics)
-    - Digitec
-    - Brack
-  - Tiktok expeerly
-  - Tiktok expeerly_deutsch
-  - Instagram expeerly
-  - Instagram expeerly_deutsch
-  - Facebook expeerly
-  - Facebook expeerly_deutsch 
-  - Thalia
-  - Shop Apotheke
+## What Kind of Data Do We Want to Store?
 
-#### Data points to store (ideal scenario)
-- For all channels 
-  - on a daily basis
-  - Per individual published video e.g https://www.youtube.com/watch?v=7NCmm8FJD08
-  - Total views
-  - Total watch time
-  - Video length
-  - Traffic source
-- For Youtube
-  - Traffic source (geographic, demographic, external/search/social)
-    - For external we should specifically track Brack, Digitec and Galaxus placements (External is what is called "Retail" in the design, or "Traffic source/subchannel in the database schema)
-    - If a traffic source from Youtube is neither "External" nor "Search", count as "Social"
- - For mux (expeerly.com and direct retail API integrations)
-  - Traffic source (geographic, demographic, external/search)
-    - For external the traffic source is indicated by the shop-id in the mux analytics: https://jmp.sh/GPxTVYH9 it is just a part of total views on the given playback ID (External is what is called "Retail" in the design, or "Traffic source/subchannel in the database schema)
+### Channels
 
-#### Calculated values
-  - View through rate (% of video watched)
-  - Average watch time (average total video length)
-  - Placement/traffic source (see design: https://jmp.sh/PZXfK9G0)
-    - Retail: Youtube (Traffic source "external" with Brack, Digitec, Galaxus), Mux (Interdiscount, OchsnerSport, as per shop ID), Thalia (manual), Shop Apotheke (manual)
-   - Search: Youtube (all traffic labeled as "Search"), expeerly.com (Mux) all traffic minus above retail traffic, Tiktok search if available and labelled as such
-   - Social: All other traffic from Youtube, Meta and Youtube that is not part of above criteria
+#### Expeerly (via Mux)
+- Ochsner Sport (tracked via shop ID)
+- Interdiscount (tracked via shop ID)
+
+#### YouTube
+- Galaxus (tracked as external via YouTube Analytics)
+- Digitec
+- Brack
+
+#### TikTok
+- @expeerly
+- @expeerly_deutsch
+
+#### Instagram
+- @expeerly
+- @expeerly_deutsch
+
+#### Facebook
+- @expeerly
+- @expeerly_deutsch
+
+#### Others
+- Thalia (manual tracking)
+- Shop Apotheke (manual tracking)
+
+---
+
+## Data Points to Store (Ideal Scenario)
+
+### General (Applicable to All Channels)
+- Daily granularity
+- Per individual published video (e.g., [YouTube Example](https://www.youtube.com/watch?v=7NCmm8FJD08))
+- Total views
+- Total watch time
+- Video length
+- Traffic source
+
+### YouTube-Specific
+- Traffic Source Details:
+  - Geographic
+  - Demographic
+  - External / Search / Social
+    - **External**: Brack, Digitec, Galaxus (counted as "Retail" in design and as "Traffic source/subchannel" in the schema)
+    - **Search**: Explicitly marked as search in YouTube
+    - **Social**: Any source not classified as External or Search
+
+### Mux (Expeerly.com + Direct Retail API Integrations)
+- Traffic Source Details:
+  - Geographic
+  - Demographic
+  - External / Search
+    - **External**: Identified via shop ID in Mux Analytics ([example screenshot](https://jmp.sh/GPxTVYH9))
+      - These views are a subset of total views for the playback ID
+
+---
+
+## Calculated Values
+
+- **View-Through Rate**: Percentage of the video watched
+- **Average Watch Time**: Mean duration viewed across all plays
+- **Placement / Traffic Source Classification** ([design reference](https://jmp.sh/PZXfK9G0)):
+
+  ### Retail
+  - YouTube: Traffic source = External, specifically Brack, Digitec, Galaxus
+  - Mux: Interdiscount and Ochsner Sport (via shop ID)
+  - Thalia and Shop Apotheke (tracked manually)
+
+  ### Search
+  - YouTube: Traffic source = Search
+  - Mux: All expeerly.com traffic, excluding Retail
+  - TikTok: If search traffic is available and labeled
+
+  ### Social
+  - Any other traffic from YouTube, Meta (Instagram, Facebook), and TikTok that doesn't fit the Retail or Search definitions
