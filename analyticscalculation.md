@@ -107,8 +107,8 @@ Supabase
 - Select Daily, Weekly, Monthly granularity
 
 ### Filters
-- Placement/traffic source (Retail, Search, Social, as pere [here](### Retail))
-- Publishing channels (All and selectable as per [here](### Channels) and design [here]([url](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8286-63930&t=GqC5bw1yqZ5WbYUU-1)))
+- Placement/traffic source (Retail, Search, Social, as pere [here](#Retail))
+- Publishing channels (All and selectable as per [here](#Channels) and design [here]([url](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8286-63930&t=GqC5bw1yqZ5WbYUU-1)))
 - Brand (from bubble)
 - Product (from bubble) 
 - Reviewer (from bubble)
