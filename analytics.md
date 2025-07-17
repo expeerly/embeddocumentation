@@ -11,7 +11,7 @@
 - For Thalia/Shop Apotheke (manual CSV upload)
 
 ### Frontend
-- Mobile [design](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8266-47332&t=GqC5bw1yqZ5WbYUU-1) and desktop design on figma (desktop pending)
+- Mobile [design](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8266-47332&t=GqC5bw1yqZ5WbYUU-1) and desktop [design](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8339-62765&t=1evCTWnBZGWp77bB-1) on figma
 - Standalone on analytics.expeerly.com
 - Next.js
 - JWT token from app.expeerly.com
