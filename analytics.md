@@ -77,21 +77,21 @@
   - Geographic
   - External / Search
     - **External**: Identified via shop ID in Mux Analytics ([example screenshot](https://jmp.sh/GPxTVYH9))
-      - These views are a subset of total views for the playback ID
+    - These views are a subset of total views for the playback ID
      
 ### TikTok-Specific
 - Traffic Source Details:
   - Geographic
   - Search / Social
     - **Search**: Views that are specifically labelled as search
-    - Social, all other views
+    - **Social**, all other views
    
 ### Instagram/Facebook-Specific
 - Traffic Source Details:
   - Geographic
   - Search / Social
     - **Search**: Views that are specifically labelled as search
-    - Social, all other views
+    - **Social**, all other views
 
 ---
 
