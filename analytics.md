@@ -129,13 +129,13 @@
 - Number of products reviewed
 - Total number of reviews
 - Search traffic vs. overall traffic
-- Average rating
+- Average rating (from existing supabase video table)
 - Placement/traffic source (views), detail view
 - Search trafic (detail view)
 - All publishing channels
 
 ### Product view (only for the relevant product)
-- Average rating
+- Average rating (from existing supabase video table)
 - Total views chart
 - Total video views
 - View through rate
@@ -148,7 +148,7 @@
 - Show/hide detail function
 
 ### Brand view (only for the relevant brand)
-- Average rating
+- Average rating (from existing supabase video table)
 - Total views chart
 - Total video views
 - View through rate
