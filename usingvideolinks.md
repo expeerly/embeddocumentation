@@ -166,7 +166,7 @@ Feel free to improve this implementation further.
 ### 3.6 Embedding Mux Videos in Shopify with Mux Player - RECOMMENDED
 To make full use of the expeerly platform with subtitles and audio assets you can use the Mux Web Player. By default all our reviews are featuring EN, DE, FR and IT caption and EN and DE AI dubbed audio. More languages are available on request. You can find the documentation to use the mux player [here](https://www.mux.com/docs/guides/mux-player-web). By using the Mux Player, you can ensure that all those assets are shown on your online store or product page.
 
-Possible ways to integrate are adding to `product.liquid` or `product.json` template or add a custom section by using the `Hosted` player here `<script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>``
+Possible ways to integrate are adding to `product.liquid` or `product.json` template or add a custom section by using the `Hosted` player here `<script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>`
 
 **Check with your Shopify developer how best to do this.**
 
