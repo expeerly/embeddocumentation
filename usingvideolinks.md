@@ -171,13 +171,13 @@ Possible ways to integrate are adding to `product.liquid` or `product.json` temp
 **Check with your Shopify developer how best to do this.**
 
 ## 4. Matching Video Links with Products in your Catalogue
-### 4.1 Currrent matching via spreadsheet
+### 4.1 Currrent matching via spreadsheet as a retailer
 If you're using the non-API integration, you get a spreadsheet on every second Tuesday of each month where on each line the relevant products including GTIN and if required our partner’s own product number are indicated along the video links. Retailers then add the video links upon their descretion to their system. This works well for up to ~10 videos a month.
 
 See a spreadsheet example [here](https://docs.google.com/spreadsheets/d/1kXQ7DBHRILnurgFzuOjY3owplIlcU94W2a_1l2gwAxg/edit?usp=sharing).
 
 ### 4.2 Matching videos as a brand
-You can go to "All assets" in your expeerly account and either copy & paste each mux streaming link or download the full video.
+You can go to "All reviews/all assets" in your expeerly account and copy & paste each mux streaming link by opening the video with your browser.  Or you can go to each campaign and check "Submitted Assets" for the relevant video links. Click the "chain" icon that will open a streaming link in your browser. Then copy the link to add to your desired location.
 
 ### 4.3 Public API
 Please check [our video review API for this](https://github.com/expeerly/embeddocumentation/blob/main/videoreviewsAPI.md)
