@@ -16,8 +16,8 @@ Version 1.3, 11th of February 2025
    - [3.2 Embed examples Mux Streaming Links](#32-embed-examples-mux-streaming-links)
    - [3.3 Embedding with Mux Developer SDK](#33-embedding-with-mux-developer-sdk)
    - [3.4 Embed example Mux SDK](#34-embed-example-mux-sdk)
-   - [3.5 Embedding Mux Videos in Shopify with simple Mux Streamin Links](#35-embedding-mux-videos-in-shopify)
-   - [3.6 Embedding Mux Videos in Shopify with Mux Player](#36-embedding-mux-videos-in-shopify-with-mux-player)
+   - [3.5 Embedding Mux Videos in Shopify with simple Mux Streaming Links](#35-embedding-mux-videos-in-shopify)
+   - [3.6 Embedding Mux Videos in Shopify with Mux Player - RECOMMENDED](#36-embedding-mux-videos-in-shopify-with-mux-player)
 4. [Matching Video Links with Products in your Catalogue](#4-matching-video-links-with-products-in-your-catalogue)
    - [4.1 Current matching via spreadsheet](#41-currrent-matching-via-spreadsheet)
    - [4.2 Matching videos as a brand](#42-matching-videos-as-a-brand)
@@ -163,8 +163,8 @@ Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
 ```
 Feel free to improve this implementation further.
 
-### 3.6 Embedding Mux Videos in Shopify with Mux Player
-To make full use of the expeerly platform with subtitles and audio assets you can use the Mux Web Player. By default all our reviews are featuring EN, DE, FR and IT caption and EN and DE AI dubbed audio. More languages are available on request. You can find the documentation to use the mux player [here](https://www.mux.com/docs/guides/mux-player-web). 
+### 3.6 Embedding Mux Videos in Shopify with Mux Player - RECOMMENDED
+To make full use of the expeerly platform with subtitles and audio assets you can use the Mux Web Player. By default all our reviews are featuring EN, DE, FR and IT caption and EN and DE AI dubbed audio. More languages are available on request. You can find the documentation to use the mux player [here](https://www.mux.com/docs/guides/mux-player-web). By using the Mux Player, you can ensure that all those assets are shown on your online store or product page.
 
 Possible ways to integrate are adding to `product.liquid` or `product.json` template or add a custom section by using the `Hosted` player here `<script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>``
 
