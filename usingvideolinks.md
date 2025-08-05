@@ -17,6 +17,7 @@ Version 1.3, 11th of February 2025
    - [3.3 Embedding with Mux Developer SDK](#33-embedding-with-mux-developer-sdk)
    - [3.4 Embed example Mux SDK](#34-embed-example-mux-sdk)
    - [3.5 Embedding Mux Videos in Shopify](#35-embedding-mux-videos-in-shopify)
+   - [3.6 Embedding Mux Videos in Shopify with Mux Player](#36-embedding-mux-videos-in-shopify-with-mux-player)
 4. [Matching Video Links with Products in your Catalogue](#4-matching-video-links-with-products-in-your-catalogue)
    - [4.1 Current matching via spreadsheet](#41-currrent-matching-via-spreadsheet)
    - [4.2 Matching videos as a brand](#42-matching-videos-as-a-brand)
@@ -80,7 +81,7 @@ As you can see, [subtitles](https://docs.mux.com/guides/add-subtitles-to-your-vi
 
 We recommend embedding the videos to the carousel or product description just next to images for best conversion impact.
 
-### 3.5 Embedding Mux Videos in Shopify
+### 3.5 Embedding Mux Videos in Shopify with simple MP4 mux streaming links
 
 For Shopify product pages, Mux videos can be embedded dynamically using Metafields. Please check this quick video walkthrough with our shopify demo shop by clicking [this link](https://jumpshare.com/v/TJ6f0l65oo9DyHn4KHC3).
 
@@ -161,6 +162,13 @@ Add this CSS to your theme’s CSS file (e.g., base.css or theme.css):
 }
 ```
 Feel free to improve this implementation further.
+
+### 3.6 Embedding Mux Videos in Shopify with Mux Player
+To make full use of the expeerly platform with subtitles and audio assets you can use the mux web player. By default all our reviews are featuring EN, DE, FR and IT caption and EN and DE AI dubbed audio. More languages are available on request. You can find the documentation to use the mux player [here](https://www.mux.com/docs/guides/mux-player-web). 
+
+Possible ways to integrate are adding to `product.liquid` or `product.json` template or add a custom section by using the `Hosted` player here `<script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>``
+
+Check with your Shopify developer how best to do this.
 
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
