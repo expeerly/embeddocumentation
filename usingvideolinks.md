@@ -168,7 +168,7 @@ To make full use of the expeerly platform with subtitles and audio assets you ca
 
 Possible ways to integrate are adding to `product.liquid` or `product.json` template or add a custom section by using the `Hosted` player here `<script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>``
 
-Check with your Shopify developer how best to do this.
+**Check with your Shopify developer how best to do this.**
 
 ## 4. Matching Video Links with Products in your Catalogue
 ### 4.1 Currrent matching via spreadsheet
