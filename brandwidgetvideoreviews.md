@@ -88,8 +88,8 @@ You can configure the widget using the available options. Below are the availabl
 | `brand-id`    | string | Required. Provided by Expeerly       | e.g. "brand123"        | —       |
 | `access-key`  | string | Required. Provided by Expeerly       | e.g. "abc123xyz"       | —       |
 | `theme`      | string | Choose widget theme                  | `light`, `dark`        | `light` |
-| `locale`     | string | Interface language                   | `bottom-right`, `bottom-left`, `top-right`, `top-left` | top-right    |
-| `position`     | string | Placement position for the flyin widget                   | `en`, `de`, `fr`, `it` | auto    |
+| `position`     | string | Placement position for the flyin widget                   | `bottom-right`, `bottom-left`, `top-right`, `top-left` | top-right    |
+| `locale`     | string | Interface language                   | `en`, `de`, `fr`, `it` |  auto    |
 
 Example:
 
