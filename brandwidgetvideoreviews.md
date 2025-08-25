@@ -54,13 +54,15 @@ Request both from the Expeerly team at `product@expeerly.com`:
 Insert the following snippet into the `<head>` of your website:
 
 ```html
-<script type="module" async src="https://www.expeerly.com/expeerly-brand-widget.js"></script>
+<script type="module" async src="https://www.expeerly.com/expeerly.js"></script>
 <script>
-  window.expeerlyBrand = {
-    brandId: "yourBrand123",
-    accessKey: "abc123xyz",
-    theme: "light" // or "dark"
-  };
+  const ExpeerlyFlyWidget = document.createElement('expeerly-fly-widget');
+  ExpeerlyFlyWidget.setAttribute('access-key', 'abc123xyz');
+      ExpeerlyFlyWidget.setAttribute('brand-id', 'yourBrand123');
+      ExpeerlyFlyWidget.setAttribute('theme', 'light'); // or "dark"
+      ExpeerlyFlyWidget.setAttribute('position', 'bottom-right'); // or "bottom-left", "top-left", "top-right"
+      ExpeerlyFlyWidget.setAttribute('locale', 'de');
+      document.body.appendChild(ExpeerlyFlyWidget);
 </script>
 ```
 
@@ -72,7 +74,8 @@ This is all you need to get the widget live on all pages.
 If you want to control where exactly the widget appears (e.g., inside a specific container), add the following tag to your HTML:
 
 ```html
-<expeerly-brand-widget></expeerly-brand-widget>
+<expeerly-fly-widget access-key="abc123xyz" brand-id="yourBrand123" theme="light" position="bottom-right" locale="de">
+</expeerly-fly-widget>
 ```
 
 If present, this overrides the default automatic placement.
@@ -80,27 +83,27 @@ If present, this overrides the default automatic placement.
 
 ## Customization Options
 
-You can configure the widget using the `window.expeerlyBrand` object. Below are the available options:
+You can configure the widget using the available options. Below are the available options:
 
 | Option       | Type   | Description                          | Values                | Default |
 |--------------|--------|--------------------------------------|------------------------|---------|
-| `brandId`    | string | Required. Provided by Expeerly       | e.g. "brand123"        | —       |
-| `accessKey`  | string | Required. Provided by Expeerly       | e.g. "abc123xyz"       | —       |
+| `brand-id`    | string | Required. Provided by Expeerly       | e.g. "brand123"        | —       |
+| `access-key`  | string | Required. Provided by Expeerly       | e.g. "abc123xyz"       | —       |
 | `theme`      | string | Choose widget theme                  | `light`, `dark`        | `light` |
-| `locale`     | string | Interface language                   | `en`, `de`, `fr`, `it` | auto    |
-| `maxVideos`  | number | Max number of videos to display      | Any integer            | 6      |
+| `locale`     | string | Interface language                   | `bottom-right`, `bottom-left`, `top-right`, `top-left` | top-right    |
+| `position`     | string | Placement position for the flyin widget                   | `en`, `de`, `fr`, `it` | auto    |
 
 Example:
 
 ```html
 <script>
-  window.expeerlyBrand = {
-    brandId: "yourBrand123",
-    accessKey: "abc123xyz",
-    theme: "dark",
-    locale: "de",
-    maxVideos: 10
-  };
+  const ExpeerlyFlyWidget = document.createElement('expeerly-fly-widget');
+  ExpeerlyFlyWidget.setAttribute('access-key', 'abc123xyz');
+      ExpeerlyFlyWidget.setAttribute('brand-id', 'yourBrand123');
+      ExpeerlyFlyWidget.setAttribute('theme', 'light'); // or "dark"
+      ExpeerlyFlyWidget.setAttribute('position', 'bottom-right'); // or "bottom-left", "top-left", "top-right"
+      ExpeerlyFlyWidget.setAttribute('locale', 'de');
+      document.body.appendChild(ExpeerlyFlyWidget);
 </script>
 ```
 
