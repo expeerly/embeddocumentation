@@ -1,4 +1,4 @@
-# Brand Widget for Video Reviews – Integration Guide - PENDING
+# Brand Widget for Video Reviews – Integration Guide - BETA
 
 This guide explains how to integrate the **expeerly Brand Widget**, a lightweight JavaScript widget that automatically displays video reviews, aggregated ratings, and review counts across all products for a specific brand. It's built for easy, async integration into any website or online shop—just like a e.g live chat widget with optional styling.
 
