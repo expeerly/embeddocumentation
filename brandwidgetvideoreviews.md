@@ -15,7 +15,7 @@ This guide explains how to integrate the **expeerly Brand Widget**, a lightweigh
   - [Step 3 (Optional): Control Placement with Widget Tag](#step-3-optional-control-placement-with-widget-tag)
   - [Customization Options](#customization-options)
 - [What the Widget Displays](#what-the-widget-displays)
-- [Support](#support)
+- [Credentials & support](#credentials-support)
 
 
 ## Overview
@@ -117,7 +117,7 @@ Once loaded, the widget displays:
 
 ---
 
-## Support
+## Credentials & support
 
-For setup help, access credentials, or customization support, contact:  
+For credentials and support, contact:  
 **product@expeerly.com**
