@@ -55,7 +55,6 @@ If you're using the shortcode, you can disable **Global auto-load** in the plugi
 - **Caching/CDN:** Purge cache after first install or when changing settings.  
 - **Theme conflicts:** Switch to shortcode placement to control the exact location.
 
----
 
 ## Shopify (Theme Integration)
 
@@ -184,7 +183,6 @@ For example, homepage + selected collections, but not elsewhere.
 - **Consent (GDPR):** If you use a consent app, wrap the initialization in your consent callback.
 - **Hydrogen/Headless:** Inject the same script and init block in your app's root layout or the product route component.
 
----
 
 ## Credentials & Support
 
