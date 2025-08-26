@@ -6,7 +6,7 @@ Below are two ready-to-implement paths to add the **[expeerly Brand Widget](http
 
 ## Part A — WordPress / WooCommerce (Custom Plugin)
 
-> **Good to know:** You don't need to add any code. Just install our ZIP and configure it.
+**Good to know:** You don't need to add any code. Just install our ZIP and configure it.
 
 ### 1) Install the plugin
 1. Download the plugin [here](https://drive.google.com/drive/folders/1_Qk5DVe1C6taByCHigUFR_WXyvhDSa_D?usp=sharing).
