@@ -1,4 +1,4 @@
-# expeerly Brand Widget — Integration Help for Shop Systems
+# Expeerly Brand Widget — Integration Help for Shop Systems
 
 Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store.
 
