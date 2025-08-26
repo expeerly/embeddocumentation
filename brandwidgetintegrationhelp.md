@@ -185,6 +185,7 @@ For example, homepage + selected collections, but not elsewhere.
 - **Consent (GDPR):** If you use a consent app, wrap the initialization in your consent callback.
 - **Hydrogen/Headless:** Inject the same script and init block in your app's root layout or the product route component.
 
+---
 
 ## Credentials & Support
 
