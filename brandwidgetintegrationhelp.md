@@ -2,6 +2,8 @@
 
 Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store.
 
+---
+
 ## Table of Contents
 - [WordPress / WooCommerce (Custom Plugin)](#wordpress--woocommerce-custom-plugin)
   - [Install the plugin](#install-the-plugin)
