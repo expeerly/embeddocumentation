@@ -4,7 +4,7 @@ Below are two ready-to-implement paths to add the **[expeerly Brand Widget](http
 
 ---
 
-## Part A — WordPress / WooCommerce (Custom Plugin)
+## WordPress / WooCommerce (Custom Plugin)
 
 **Good to know:** You don't need to add any code. Just install our ZIP and configure it.
 
@@ -45,7 +45,7 @@ If you're using the shortcode, you can disable **Global auto-load** in the plugi
 
 ---
 
-## Part B — Shopify (Theme Integration)
+## Shopify (Theme Integration)
 
 You'll add a small snippet and decide where it should render (all pages, products only, or selected templates).
 
