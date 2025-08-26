@@ -10,13 +10,11 @@ Below are two ready-to-implement paths to add the **[expeerly Brand Widget](http
   3. [Optional: manual placement with shortcode](#3-optional-manual-placement-with-shortcode)
   4. [Optional: disable global auto-load](#4-optional-disable-global-auto-load)
   5. [Troubleshooting](#5-troubleshooting)
-
 2. [Shopify (Theme Integration)](#shopify-theme-integration)
   1. [Option 1: Show on all pages (fastest)](#option-1-show-on-all-pages-fastest)
   2. [Option 2: Products only](#option-2-products-only)
   3. [Option 3: Show on specific pages only](#option-3-show-on-specific-pages-only)
   4. [Notes & Best Practices (Shopify)](#notes--best-practices-shopify)
-
 3. [Credentials & Support](#credentials--support)
 
 ## WordPress / WooCommerce (Custom Plugin)
