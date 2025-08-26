@@ -32,7 +32,7 @@ If you prefer to place the widget in a specific spot (e.g., inside your product 
 [expeerly_fly_widget theme="light" position="bottom-right" locale="auto"]
 ```
 
-> The shortcode automatically uses your saved **Access Key** and **Brand ID**. Attributes are optional and override the saved display settings for that placement.
+The shortcode automatically uses your saved **Access Key** and **Brand ID**. Attributes are optional and override the saved display settings for that placement.
 
 ### 4) Optional: disable global auto-load
 If you're using the shortcode, you can disable **Global auto-load** in the plugin settings to avoid duplicate widgets.
