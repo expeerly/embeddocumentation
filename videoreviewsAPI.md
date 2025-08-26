@@ -6,6 +6,8 @@ This guide explains how to integrate expeerly video reviews into your product pa
 
 Version 1.8.2, 4th of August 2025
 
+---
+
 ## Table of Contents
 - [Features](#features)
 - [Integration Steps Expeerly for your Image Gallery/Carousel](#integration-steps-expeerly-for-your-image-gallerycarousel)
