@@ -1,7 +1,6 @@
-# expeerly Brand Widget — Integration Help (WordPress/WooCommerce & Shopify)
+# expeerly Brand Widget — Integration Help for Shop Systems
 
-Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store. Both follow your BETA guide (v1.0, 25.08.2025) and keep the widget async and non-blocking.
-
+Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store.
 
 ---
 
@@ -10,8 +9,9 @@ Below are two ready-to-implement paths to add the **[expeerly Brand Widget](http
 > **Good to know:** You don't need to add any code. Just install our ZIP and configure it.
 
 ### 1) Install the plugin
-1. Go to **WordPress Admin → Plugins → Add New → Upload Plugin**.
-2. Upload the file **`expeerly-brand-widget.zip`** and click **Install Now**, then **Activate**.
+1. Download the plugin [here](https://drive.google.com/drive/folders/1_Qk5DVe1C6taByCHigUFR_WXyvhDSa_D?usp=sharing).
+2. Go to **WordPress Admin → Plugins → Add New → Upload Plugin**.
+3. Upload the file **`expeerly-brand-widget.zip`** and click **Install Now**, then **Activate**.
 
 ### 2) Configure the widget
 1. Go to **Settings → expeerly Brand Widget**.
@@ -178,7 +178,3 @@ For example, homepage + selected collections, but not elsewhere.
 
 You will receive your **Access Key** and **Brand ID** from product@expeerly.com.
 
-For assistance, email product@expeerly.com with:
-- Your store URL
-- Theme name/version (Shopify) or site URL (WordPress)
-- Where you want the widget to appear (all pages, product only, specific templates)
