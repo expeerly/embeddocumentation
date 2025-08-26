@@ -2,20 +2,19 @@
 
 Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store.
 
-# Table of Contents
-
-1. [WordPress / WooCommerce (Custom Plugin)](#wordpress--woocommerce-custom-plugin)
-  1. [Install the plugin](#1-install-the-plugin)
-  2. [Configure the widget](#2-configure-the-widget)
-  3. [Optional: manual placement with shortcode](#3-optional-manual-placement-with-shortcode)
-  4. [Optional: disable global auto-load](#4-optional-disable-global-auto-load)
-  5. [Troubleshooting](#5-troubleshooting)
-2. [Shopify (Theme Integration)](#shopify-theme-integration)
-  1. [Option 1: Show on all pages (fastest)](#option-1-show-on-all-pages-fastest)
-  2. [Option 2: Products only](#option-2-products-only)
-  3. [Option 3: Show on specific pages only](#option-3-show-on-specific-pages-only)
-  4. [Notes & Best Practices (Shopify)](#notes--best-practices-shopify)
-3. [Credentials & Support](#credentials--support)
+## Table of Contents
+- [WordPress / WooCommerce (Custom Plugin)](#wordpress--woocommerce-custom-plugin)
+ - [Install the plugin](#install-the-plugin)
+ - [Configure the widget](#configure-the-widget)
+ - [Optional: manual placement with shortcode](#optional-manual-placement-with-shortcode)
+ - [Optional: disable global auto-load](#optional-disable-global-auto-load)
+ - [Troubleshooting](#troubleshooting)
+- [Shopify (Theme Integration)](#shopify-theme-integration)
+ - [Option 1: Show on all pages (fastest)](#option-1-show-on-all-pages-fastest)
+ - [Option 2: Products only](#option-2-products-only)
+ - [Option 3: Show on specific pages only](#option-3-show-on-specific-pages-only)
+ - [Notes & Best Practices (Shopify)](#notes--best-practices-shopify)
+- [Credentials & Support](#credentials--support)
 
 ## WordPress / WooCommerce (Custom Plugin)
 
