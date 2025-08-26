@@ -1,8 +1,8 @@
 # expeerly Brand Widget — Integration Help (WordPress/WooCommerce & Shopify)
 
-Below are two ready-to-implement paths to add the **expeerly Brand Widget** to your store. Both follow your BETA guide (v1.0, 25.08.2025) and keep the widget async and non-blocking.
+Below are two ready-to-implement paths to add the **[expeerly Brand Widget](https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md)** to your store. Both follow your BETA guide (v1.0, 25.08.2025) and keep the widget async and non-blocking.
 
-https://github.com/expeerly/embeddocumentation/blob/main/brandwidgetvideoreviews.md
+
 ---
 
 ## Part A — WordPress / WooCommerce (Custom Plugin)
