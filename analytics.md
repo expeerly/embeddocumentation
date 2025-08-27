@@ -32,8 +32,8 @@
 
 #### YouTube (via Integrator)
 - Galaxus (tracked as external via YouTube Analytics)
-- Digitec
-- Brack
+- Digitec (tracked as external via YouTube Analytics)
+- Brack (tracked as external via YouTube Analytics)
 
 #### TikTok (via Integrator)
 - @expeerly
@@ -81,14 +81,14 @@
      
 ### TikTok-Specific
 - Traffic Source Details:
-  - Geographic
+  - Geographic (if easily available, otherwise postpone)
   - Search / Social
     - **Search**: Views that are specifically labelled as search
     - **Social**, all other views
    
 ### Instagram/Facebook-Specific
 - Traffic Source Details:
-  - Geographic
+  - Geographic (if easily available, otherwise postpone)
   - Search / Social
     - **Search**: Views that are specifically labelled as search
     - **Social**, all other views
