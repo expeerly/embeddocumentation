@@ -66,7 +66,7 @@
 ### YouTube-Specific
 - Traffic Source Details:
   - Geographic
-  - Demographic
+  - ~Demographic~ POSTPONE
   - External / Search / Social
     - **External**: Brack, Digitec, Galaxus (counted as "Retail" in design of "Placement/Traffic source"  (see [here](https://jmp.sh/jeZpkbXb)) and as "Traffic source/subchannel" in the schema)
     - **Search**: Explicitly marked as search in YouTube (counted as "Search" of "Placement/Traffic source", see [here](https://jmp.sh/h7eWaXYH))
