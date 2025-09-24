@@ -81,15 +81,15 @@
      
 ### TikTok-Specific
 - Traffic Source Details:
-  - Geographic (if easily available, otherwise postpone)
-  - Search / Social
+  - ~Geographic~ (postponed)
+  - Search / Social (if applicable)
     - **Search**: Views that are specifically labelled as search
     - **Social**, all other views
    
 ### Instagram/Facebook-Specific
 - Traffic Source Details:
-  - Geographic (if easily available, otherwise postpone)
-  - Search / Social
+  - ~Geographic~ (postponed)
+  - Search / Social (if applicable)
     - **Search**: Views that are specifically labelled as search
     - **Social**, all other views
 
