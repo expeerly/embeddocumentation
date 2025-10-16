@@ -68,7 +68,7 @@
 - Mux: All expeerly.com traffic, excluding Retail tagged via shop ID
 
 ### Social
-- Any other traffic from YouTube that is not labelled as Search or Retail
+- Any other traffic from YouTube that is not labelled as Search or Retail (=youtube external "brack", "digitec", "galaxus")
 - Meta (Instagram, Facebook)
 - Tiktok
 
