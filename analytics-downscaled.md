@@ -11,9 +11,13 @@
 - For Mux (expeerly.com/retailer API); [mux data api](https://www.mux.com/docs/api-reference/data/metrics/list-breakdown-values)
 
 ### Frontend
-- See [here](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8921-75637&t=2513qwe1EyaK0lFu-0)
 - Standalone on analytics.expeerly.com
 - Next.js
+- See [here](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=8921-75637&t=2513qwe1EyaK0lFu-0)
+- Use 2 breakpoints
+  - @media (max-width: 1024px) for smaller screens, keep landscape version, just remove space left right, and make container for views smaller, see [here](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=9342-72472&t=2513qwe1EyaK0lFu-0)
+  - @media (max-width: 640px), use the mobile vertical version, see [here](https://www.figma.com/design/MU9nzvKpZjcbRV2Wjs5ozC/CompleteApp-PlayerUX?node-id=9342-71411&t=2513qwe1EyaK0lFu-0)
+- Please note, the responsive design doesn't need to be pixel perfect, just make sure that the content is not cut off or overlapping using the browser emulator
 - JWT token from app.expeerly.com/bubble that allows the customer to see their own data
 - Create a special token for expeerly admins that allows to see the data of ALL customers
 
