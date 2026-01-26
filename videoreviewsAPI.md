@@ -4,7 +4,7 @@ This guide explains how to integrate expeerly video reviews into your product pa
 
 **PLEASE NOTE: Using expeerly reviews as a retailer is free of charge**
 
-Version 1.8.2, 4th of August 2025
+Version 1.9.0, 26th of January 2026
 
 ---
 
@@ -27,97 +27,145 @@ Version 1.8.2, 4th of August 2025
 
 
 ## Features
+Our integration offers the possibility to:
+- **Add video reviews directly to your product image gallery or carousel** using **Mux** as the video streaming provider, or **YouTube**
+- Implement a **widget-based integration** (badge + review block) that pulls review data from the expeerly system and renders videos via **Mux or YouTube**
 
-Our integration offers the possibiltiy to
-
-- **add video reviews directly to your image gallery** or carousel using [mux](https://mux.com) as video streaming provider and
-- a **widget style implementation** for a badge and a review block that pulls data from the expeerly system and uses [mux](https://mux.com) for videos.
-
-The integration provides:
-
-- Video reviews in your product image gallery/carousel
-- Detailed review block including:
+### The integration provides:
+- Video reviews inside your product image gallery/carousel
+- A detailed review block including:
   - Star ratings
   - Reviewer names and profile pictures
   - View counts (pending)
   - Expeerly branding
-- Above-fold summary button linking to review block
-- Zero-impact when no videos are available
-- For the gallery/carousel or badge/review block integration, **all steps are mandatory to implement**
+- An above-the-fold summary button linking to the review block
+- Zero impact on layout or performance when no videos are available
+- For gallery/carousel or badge/review block integrations, **all implementation steps are mandatory**
 
-## Integration Steps Expeerly for your Image Gallery/Carousel
+---
+
+## Integration Steps – Expeerly Image Gallery / Carousel
 
 ### Step 1: Get Your Access Key
 
-To get your Access Key, please contact the expeerly team directly at <product@expeerly.com>. They will provide your store Access Key.
+To obtain your Access Key, please contact the expeerly team at  
+**product@expeerly.com**
 
-Pass the provided Access Key in the expeerly API.
+You will receive a store-specific Access Key which must be passed to the expeerly API.
 
-### Step 2: Install Mux Player (Web, iOS, Android)
+---
 
-Get the mux player that best fits your needs [here](https://www.mux.com/docs/guides/play-your-videos).
+### Step 2: Install a Video Player (Mux or YouTube)
 
-**PLEASE NOTE: The use of the Mux Player is mandatory if you want to integrate expeerly video reviews in your product image gallery/carousel.**
+#### Option A: Mux Player (recommended)
 
-### Step 3: Prefetch and store available reviews
+Use the Mux Player SDK that best fits your platform (Web, iOS, Android):  
+https://www.mux.com/docs/guides/play-your-videos
 
-#### Fetch & store CSV with GTIN/EAN/UPC numbers
-Check which GTIN/EAN/UPC numbers have a review on `expeerly.com/csv.html` [(click link here)](https://expeerly.com/csv.html) and get a list of products for which video reviews are available. The list is updated in real time and have a timestamp when you access it. It provides a main GTIN/EAN and UPC number as well as all size and colour variants of the same product. This is necessary to insure that the API returns actual reviews.
+**Important:**  
+The Mux Player is recommended if you want to embed expeerly video reviews directly into your product image gallery or carousel.
 
-**PLEASE NOTE: You must prefetch the available GTIN/EAN/UPC numbers, store it and refresh every 24 hours. You're not allowed to call our API for each page load from your online shop.**
+#### Option B: YouTube
 
-#### Normalize GTIN/EAN/UPC
-Our system stores all GTIN/EAN/UPC withouth leading or trailing integers, e.g 00759454301040 is stored as 759454301040. Make sure that when you call the CSV and store the values in your system that you remove any leading integers e.g `gtin = gtin.replace(/^0+/, "")`.
+Alternatively, videos can be rendered using **YouTube**, as the expeerly API now also exposes YouTube video IDs.
 
-### Step 4: Call the expeerly API and pass your Store-ID for tracking
+---
 
-#### API call
+### Step 3: Prefetch and Store Available Reviews (MANDATORY for all players)
 
-Call the expeerly API `https://api.expeerly.com/api/videos?access_key=${accesskey}&gtin=${GTIN/UPCnumber}`
+#### Fetch & Store CSV with GTIN / EAN / UPC
 
-Example of API call:
+Check which products have available video reviews via:  
+https://expeerly.com/csv.html
+
+The CSV:
+- Is updated in real time
+- Includes a timestamp of access
+- Contains:
+  - One main GTIN/EAN/UPC
+  - All size and colour variants belonging to the same product
+
+This step is required to ensure that API calls only happen for products that actually have reviews.
+
+**Important:**
+- You **must** prefetch and store this CSV
+- Refresh it **every 24 hours**
+- You are **not allowed** to call the expeerly API on every page load
+
+---
+
+#### Normalize GTIN / EAN / UPC
+
+All GTIN/EAN/UPC values in the expeerly system are stored **without leading zeros**.
+
+Example:  
+`00759454301040` → `759454301040`
+
+Make sure to normalize values before storing and using them:
+```js
+gtin = gtin.replace(/^0+/, "");
+```
+
+---
+
+### Step 4: Call the Expeerly API and Pass Your Store ID
+
+#### API Call
+```bash
+https://api.expeerly.com/api/videos?access_key=${accesskey}&gtin=${GTIN}
+```
+
+Example:
 ```
 https://api.expeerly.com/api/videos?access_key=h233i2q1l23w837w1k29we4mn8ui03gh&gtin=123456789012
 ```
 
-The response is an array of videos. For setting up the mux player you will need the mux_playback_id_text
+The response is an array of video objects.
 
-Example of returned data:
-
+#### Example API Response – Mux Video
 ```js
 [
-    {
-      ...
-      "muxPlaybackId": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM",
-    },
+  {
+    "muxPlaybackId": "J9S1Qt6MKYxf01EgmAmyMyXpvFhb8g02p01301QhzUgptrM"
+  }
 ]
 ```
 
-Pass the `muxPlaybackId` value to `playbackId`.
+Use `muxPlaybackId` as the `playbackId` in the Mux Player.
 
-#### Store ID for Tracking
+#### Example API Response – YouTube Video
+```js
+[
+  {
+    "youtubeId": "peZrxw1WobY"
+  }
+]
+```
 
-**Please note:** In order to make sure that you, we and the brands can track where the view traffic is coming from, passing a StoreId value is mandatory to track the views from your store. Please use the ID provided by the expeerly product team.
+Use `youtubeId` to render the video via the YouTube player.
 
-To pass the StoreId of value `store1` on the mux tag check the examples below.
+---
 
-HTML Example
+### Store ID for Tracking (Mandatory with Mux Player)
 
+To ensure correct view attribution for you, expeerly, and the brands, passing a Store ID is mandatory.
+
+The Store ID will be provided by the expeerly product team.
+
+#### HTML Example (Mux)
 ```html
 <mux-player
-  metadata-custom-1={store1}
+  metadata-custom-1="store1"
 ></mux-player>
 ```
 
-React Example
-
-```html
+#### React Example (Mux)
+```jsx
 <MuxPlayer
   metadata={{
-    'custom-1': 'store1',
+    "custom-1": "store1"
   }}
-></MuxPlayer>
-
+/>
 ```
 
 ## Integration Steps Expeerly Badge/Review Block Widget
